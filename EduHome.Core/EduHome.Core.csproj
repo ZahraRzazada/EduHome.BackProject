@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Entities\BaseEntities\" />
+    <None Remove="DTOS\" />
+    <None Remove="Repositories\" />
+    <None Remove="DTOS\Testimonial\" />
+    <None Remove="DTOS\Slider\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\BaseEntities\" />
+    <Folder Include="DTOS\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="DTOS\Testimonial\" />
+    <Folder Include="DTOS\Slider\" />
+  </ItemGroup>
+</Project>

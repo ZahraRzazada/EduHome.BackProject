@@ -1,0 +1,17 @@
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/bin/Debug/net6.0/EduHome.Data.deps.json
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/bin/Debug/net6.0/EduHome.Data.runtimeconfig.json
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/bin/Debug/net6.0/EduHome.Data.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/bin/Debug/net6.0/EduHome.Data.pdb
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/bin/Debug/net6.0/EduHome.Core.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/bin/Debug/net6.0/EduHome.Core.pdb
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.csproj.AssemblyReference.cache
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.AssemblyInfoInputs.cache
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.AssemblyInfo.cs
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.csproj.CoreCompileInputs.cache
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.csproj.CopyComplete
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/refint/EduHome.Data.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.pdb
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/EduHome.Data.genruntimeconfig.cache
+/Users/zahrarzazada/Projects/EduHome/EduHome.Data/obj/Debug/net6.0/ref/EduHome.Data.dll

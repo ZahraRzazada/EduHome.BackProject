@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EduHome.Data\EduHome.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="CustomMiddlewares\" />
+    <None Remove="Exceptions\" />
+    <None Remove="Extensions\" />
+    <None Remove="Responses\" />
+    <None Remove="ServiceRegistrations\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Implementations\" />
+    <None Remove="Services\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomMiddlewares\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Responses\" />
+    <Folder Include="ServiceRegistrations\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Implementations\" />
+    <Folder Include="Services\Interfaces\" />
+  </ItemGroup>
+</Project>

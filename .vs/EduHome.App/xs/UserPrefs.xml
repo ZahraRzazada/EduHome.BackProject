@@ -1,0 +1,55 @@
+﻿<Properties StartupConfiguration="{8D887865-419F-40B1-8A0C-E1901F864F65}|EduHome">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EduHome.Core/Entities/HomeSlider.cs">
+    <Files>
+      <File FileName="EduHome/Views/Home/Index.cshtml" />
+      <File FileName="EduHome/Views/About/Index.cshtml" />
+      <File FileName="EduHome/Views/Blog/Index.cshtml" />
+      <File FileName="EduHome/Views/Shared/_Layout.cshtml" />
+      <File FileName="EduHome/Controllers/AboutController.cs" />
+      <File FileName="EduHome/Controllers/BlogController.cs" />
+      <File FileName="EduHome/Controllers/CourseController.cs" />
+      <File FileName="EduHome/Controllers/TeacherController.cs" />
+      <File FileName="EduHome/Controllers/ContactController.cs" />
+      <File FileName="EduHome/Controllers/HomeController.cs" />
+      <File FileName="EduHome/Views/Course/Index.cshtml" />
+      <File FileName="EduHome/Views/Course/Detail.cshtml" />
+      <File FileName="EduHome/Views/Teacher/Index.cshtml" />
+      <File FileName="EduHome/Views/Teacher/Detail.cshtml" />
+      <File FileName="EduHome/Views/Blog/Detail.cshtml" />
+      <File FileName="EduHome/Views/Contact/Index.cshtml" />
+      <File FileName="EduHome.Core/Entities/HomeSlider.cs" Line="6" Column="36" />
+      <File FileName="EduHome.Core/Entities/BaseEntities/BaseEntity.cs" />
+      <File FileName="EduHome.Core/Repositories/IRepository.cs" />
+      <File FileName="EduHome.Data/Contexts/EduDbContext.cs" />
+      <File FileName="EduHome/Views/_ViewImports.cshtml" />
+      <File FileName="EduHome.Data/Repositories/Repository.cs" />
+      <File FileName="EduHome.Data/ServiceRegisterations/DataAccessServiceRegisterExtention.cs" />
+      <File FileName="EduHome.Service/CustomMiddlewares/ExceptionMiddlewareExtensions.cs" />
+      <File FileName="EduHome.Service/Exceptions/ItemNotFoundExcpetion.cs" />
+      <File FileName="EduHome.Service/Extensions/FileExtention.cs" />
+      <File FileName="EduHome.Service/Responses/CommonResponse.cs" />
+      <File FileName="EduHome.Service/ServiceRegistrations/ServiceLaierServiceRegisterExtention.cs" />
+      <File FileName="EduHome/appsettings.Development.json" />
+      <File FileName="EduHome/appsettings.json" />
+      <File FileName="EduHome/Program.cs" />
+      <File FileName="EduHome/ViewModels/HomeViewModel.cs" />
+      <File FileName="EduHome.Core/DTOS/Sliders/SliderDto.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EduHome.App" expanded="True">
+            <Node name="EduHome.App" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EduHome.App PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
