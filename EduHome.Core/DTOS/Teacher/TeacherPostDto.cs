@@ -14,7 +14,7 @@ namespace EduHome.Core.DTOS
         public List<string> Urls { get; set; } = null!;
         public int PositionId { get; set; }
         public int DegreeId { get; set; }
-        public int HobbyId { get; set; } 
+        public int HobbyId { get; set; }
         public List<int> FacultyIds { get; set; } = null!;
     }
 }

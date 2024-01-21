@@ -20,9 +20,9 @@ namespace EduHome.Core.DTOS
         public IEnumerable<FacultyGetDto> Faculties { get; set; } = null!;
         public PositionGetDto Position { get; set; }
         public DegreeGetDto Degree { get; set; }
-        public HobbyGetDto Hobby { get; set; }    
+        public HobbyGetDto Hobby { get; set; }
         public List<TeacherFaculty> TeacherFaculties { get; set; }
-       
+
 
     }
 }

@@ -11,7 +11,7 @@
     "EduHome": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:31673",
+      "applicationUrl": "http://localhost:34625",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
