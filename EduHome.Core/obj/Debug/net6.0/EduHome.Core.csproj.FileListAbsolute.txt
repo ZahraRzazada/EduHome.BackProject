@@ -10,3 +10,5 @@
 /Users/zahrarzazada/Projects/EduHome/EduHome.Core/obj/Debug/net6.0/refint/EduHome.Core.dll
 /Users/zahrarzazada/Projects/EduHome/EduHome.Core/obj/Debug/net6.0/EduHome.Core.pdb
 /Users/zahrarzazada/Projects/EduHome/EduHome.Core/obj/Debug/net6.0/ref/EduHome.Core.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Core/bin/Debug/net6.0/EduHome.Core.runtimeconfig.json
+/Users/zahrarzazada/Projects/EduHome/EduHome.Core/obj/Debug/net6.0/EduHome.Core.genruntimeconfig.cache

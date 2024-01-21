@@ -10,6 +10,10 @@ namespace EduHome.Service.ServiceRegistrations
 		{
 			services.AddScoped<ISliderService, SliderService>();
             services.AddScoped<ITestimonialService, TestimonialService>();
+            services.AddScoped<IDegreeService, DegreeService>();
+            services.AddScoped<IFacultyService, FacultyService>();
+            services.AddScoped<IPositionService, PositionService>();
+            services.AddScoped<ITeacherService, TeacherService>();
         }
 	}
 }

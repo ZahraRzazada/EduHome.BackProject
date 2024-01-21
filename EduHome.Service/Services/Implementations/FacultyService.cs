@@ -7,78 +7,77 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EduHome.Service.Services.Implementations
 {
-    public class SliderService : ISliderService
+    public class FacultyService : IFacultyService
     {
-        readonly ISliderRepository _sliderRepository;
-        
-        public SliderService(ISliderRepository sliderRepository)
-        {
-            _sliderRepository = sliderRepository;
-        }
-        public async Task CreateAsync(SliderGetDto dto)
-        {
-            Slider slider = new Slider();
-            slider.Description = dto.Description;
-            slider.Image = dto.Image;
-            slider.Title = dto.Title;
-            await _sliderRepository.AddAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
-        }
-        public async Task<IEnumerable<SliderGetDto>> GetAllAsync()
-        {
-            IEnumerable<SliderGetDto> sliders = await _sliderRepository.GetQuery(x => !x.IsDeleted)
-               .AsNoTrackingWithIdentityResolution().Select(x => new SliderGetDto { Title = x.Title, Description = x.Description, Image = x.Image })
-               .ToListAsync();
-            return sliders;
-        }
-        public async Task<SliderGetDto> GetAsync(int id)
-        {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
 
-            if (slider == null)
+        readonly IFacultyRepository _facultyRepository;
+
+        public FacultyService(IFacultyRepository facultyRepository)
+        {
+            _facultyRepository = facultyRepository;
+        }
+
+        public async Task CreateAsync(FacultyPostDto dto)
+        {
+            Faculty faculty = new Faculty();
+            faculty.Name = dto.Name;
+
+            await _facultyRepository.AddAsync(faculty);
+            await _facultyRepository.SaveChangesAsync();
+        }
+        public async Task<IEnumerable<FacultyGetDto>> GetAllAsync()
+        {
+            IEnumerable<FacultyGetDto> faculty = await _facultyRepository.GetQuery(x => !x.IsDeleted)
+               .AsNoTrackingWithIdentityResolution().Select(x => new FacultyGetDto { Name = x.Name })
+               .ToListAsync();
+            return faculty;
+        }
+        public async Task<FacultyGetDto> GetAsync(int id)
+        {
+            Faculty? faculty = await _facultyRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+
+            if (faculty == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("faculty Not Found");
             }
 
-            SliderGetDto slidergetdto = new SliderGetDto
+            FacultyGetDto facultyGetDto = new FacultyGetDto
             {
-            Title=slider.Title,
-            Description=slider.Description,
-            Image=slider.Image
+                Name = faculty.Name,
+
             };
-            return slidergetdto;
+            return facultyGetDto;
         }
 
         public async Task RemoveAsync(int id)
         {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            Faculty? faculty = await _facultyRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
 
-            if (slider == null)
+            if (faculty == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("Faculty Not Found");
             }
-            slider.IsDeleted = true;
-            await _sliderRepository.UpdateAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
+            faculty.IsDeleted = true;
+            await _facultyRepository.UpdateAsync(faculty);
+            await _facultyRepository.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(int id, SliderGetDto dto)
+        public async Task UpdateAsync(int id, FacultyPostDto dto)
         {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            Faculty? faculty = await _facultyRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
 
-            if (slider == null)
+            if (faculty == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("Faculty Not Found");
             }
 
-            slider.Title = dto.Title;
-            slider.Description = dto.Description;
-            slider.Image = dto.Image;
+            faculty.Name = dto.Name;
 
-            await _sliderRepository.UpdateAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
+
+
+            await _facultyRepository.UpdateAsync(faculty);
+            await _facultyRepository.SaveChangesAsync();
         }
-
     }
 }
 

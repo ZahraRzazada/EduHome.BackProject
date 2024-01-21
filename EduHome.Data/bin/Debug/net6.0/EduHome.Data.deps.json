@@ -11,19 +11,16 @@
           "EduHome.Core": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.25",
           "Microsoft.EntityFrameworkCore": "6.0.25",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
-          "Microsoft.EntityFrameworkCore.Tools": "6.0.25"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25"
         },
         "runtime": {
           "EduHome.Data.dll": {}
         }
       },
-      "Humanizer.Core/2.8.26": {
-        "runtime": {
-          "lib/netstandard2.0/Humanizer.dll": {
-            "assemblyVersion": "2.8.0.0",
-            "fileVersion": "2.8.26.1919"
-          }
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0",
+          "System.IO.Pipelines": "5.0.2"
         }
       },
       "Microsoft.AspNetCore.JsonPatch/6.0.25": {
@@ -136,18 +133,6 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/6.0.25": {},
-      "Microsoft.EntityFrameworkCore.Design/6.0.25": {
-        "dependencies": {
-          "Humanizer.Core": "2.8.26",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.25"
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
-            "assemblyVersion": "6.0.25.0",
-            "fileVersion": "6.0.2523.52312"
-          }
-        }
-      },
       "Microsoft.EntityFrameworkCore.Relational/6.0.25": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.25",
@@ -170,11 +155,6 @@
             "assemblyVersion": "6.0.25.0",
             "fileVersion": "6.0.2523.52312"
           }
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/6.0.25": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "6.0.25"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -411,6 +391,7 @@
           }
         }
       },
+      "System.IO.Pipelines/5.0.2": {},
       "System.Runtime.Caching/4.7.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.7.0"
@@ -492,6 +473,9 @@
         }
       },
       "EduHome.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+        },
         "runtime": {
           "EduHome.Core.dll": {}
         }
@@ -504,12 +488,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Humanizer.Core/2.8.26": {
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
-      "path": "humanizer.core/2.8.26",
-      "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+      "sha512": "sha512-3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "hashPath": "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/6.0.25": {
       "type": "package",
@@ -567,13 +551,6 @@
       "path": "microsoft.entityframeworkcore.analyzers/6.0.25",
       "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.25.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Design/6.0.25": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-YawyMKj1f+GkwHrxMIf9tX84sMGgLFa5YoRmyuUugGhffiubkVLYIrlm4W0uSy2NzX4t6+V7keFLQf7lRQvDmA==",
-      "path": "microsoft.entityframeworkcore.design/6.0.25",
-      "hashPath": "microsoft.entityframeworkcore.design.6.0.25.nupkg.sha512"
-    },
     "Microsoft.EntityFrameworkCore.Relational/6.0.25": {
       "type": "package",
       "serviceable": true,
@@ -587,13 +564,6 @@
       "sha512": "sha512-/oIgY1cu75FiZc5gDfQQKgL9lv79Vearc+AY5WpZkoA0k+hJnkVYg68mdgbBZkJuyAC93cdKw8UXtCN0sUH7yg==",
       "path": "microsoft.entityframeworkcore.sqlserver/6.0.25",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.25.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Tools/6.0.25": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2iPMR+DHXh2Xn9qoJ0ejzdHblpns73e1pZ/pyRbYDQi0HPJyq1/pTYDda1owJ5W2lxAGDg8l5Fl1jVp97fTR1g==",
-      "path": "microsoft.entityframeworkcore.tools/6.0.25",
-      "hashPath": "microsoft.entityframeworkcore.tools.6.0.25.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",
@@ -769,6 +739,13 @@
       "sha512": "sha512-5tBCjAub2Bhd5qmcd0WhR5s354e4oLYa//kOWrkX+6/7ZbDDJjMTfwLSOiZ/MMpWdE4DWPLOfTLOq/juj9CKzA==",
       "path": "system.identitymodel.tokens.jwt/6.8.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Iew+dfa6FFiyvWBdRmXApixRY1db+beyutpIck4SOSe0NLM8FD/7AD54MscqVLhvfSMLHO7KadjTRT7fqxOGTA==",
+      "path": "system.io.pipelines/5.0.2",
+      "hashPath": "system.io.pipelines.5.0.2.nupkg.sha512"
     },
     "System.Runtime.Caching/4.7.0": {
       "type": "package",

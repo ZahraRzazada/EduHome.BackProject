@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gubx6QlySauoM5v1kpmWOnOa2Q7TVryoa/jXFKXl/tVNbiQWRONYbHWD5SHNhYHUbtFLfvGeDDZg6kiI4P6jzg==",
+  "dgSpecHash": "jOAHibQ80AWDQs9SA7g3SF6vuJTpppEGqi2m7KpChZlZhpN6ENE366pgeGBNGVoNzV/Ne5wobOPwHsCkUgYsrw==",
   "success": true,
   "projectFilePath": "/Users/zahrarzazada/Projects/EduHome/EduHome.Service/EduHome.Service.csproj",
   "expectedPackageFiles": [
+    "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.http.features/5.0.17/microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.jsonpatch/6.0.25/microsoft.aspnetcore.jsonpatch.6.0.25.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/6.0.25/microsoft.aspnetcore.mvc.newtonsoftjson.6.0.25.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
@@ -39,6 +40,7 @@
     "/Users/zahrarzazada/.nuget/packages/system.diagnostics.diagnosticsource/6.0.1/system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/system.drawing.common/4.7.0/system.drawing.common.4.7.0.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/system.identitymodel.tokens.jwt/6.8.0/system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "/Users/zahrarzazada/.nuget/packages/system.io.pipelines/5.0.2/system.io.pipelines.5.0.2.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/system.runtime.caching/4.7.0/system.runtime.caching.4.7.0.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/system.security.accesscontrol/4.7.0/system.security.accesscontrol.4.7.0.nupkg.sha512",

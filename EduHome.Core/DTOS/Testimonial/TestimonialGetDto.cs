@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EduHome.Core.DTOS
 {
-	public class TestimonialGetDto
+	public record TestimonialGetDto
 	{
         public string Text { get; set; } = null!;
         public string FullName { get; set; } = null!;

@@ -13,6 +13,11 @@
     <None Remove="Repositories\" />
     <None Remove="DTOS\Testimonial\" />
     <None Remove="DTOS\Slider\" />
+    <None Remove="DTOS\Degree\" />
+    <None Remove="DTOS\Faculty\" />
+    <None Remove="DTOS\Position\" />
+    <None Remove="DTOS\Teacher\" />
+    <None Remove="DTOS\Hobby\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -21,5 +26,17 @@
     <Folder Include="Repositories\" />
     <Folder Include="DTOS\Testimonial\" />
     <Folder Include="DTOS\Slider\" />
+    <Folder Include="DTOS\Degree\" />
+    <Folder Include="DTOS\Faculty\" />
+    <Folder Include="DTOS\Position\" />
+    <Folder Include="DTOS\Teacher\" />
+    <Folder Include="DTOS\Hobby\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
   </ItemGroup>
 </Project>

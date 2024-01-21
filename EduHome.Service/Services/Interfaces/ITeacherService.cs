@@ -1,19 +1,19 @@
 ﻿using System;
 using EduHome.Core.DTOS;
+using EduHome.Service.Responses;
 
 namespace EduHome.Service.Services.Interfaces
 {
-	public interface ISliderService
+	public interface ITeacherService
 	{
+        public Task<IEnumerable<TeacherGetDto>> GetAllAsync();
 
-        public Task<IEnumerable<SliderGetDto>> GetAllAsync();
-
-        public Task CreateAsync(SliderGetDto dto);
+        public Task<CommonResponse> CreateAsync(TeacherPostDto dto);
 
         public Task RemoveAsync(int id);
 
-        public Task UpdateAsync(int id, SliderGetDto dto);
-        public Task<SliderGetDto> GetAsync(int id);
+        public Task<CommonResponse> UpdateAsync(int id, TeacherPostDto dto);
+        public Task<TeacherGetDto> GetAsync(int id);
     }
 }
 

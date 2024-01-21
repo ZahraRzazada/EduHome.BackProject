@@ -5,9 +5,9 @@ using EduHome.Data.Contexts;
 
 namespace EduHome.Data.Repositories
 {
-    public class SliderRepository : Repository<Slider>, ISliderRepository
+    public class FacultyRepository : Repository<Faculty>, IFacultyRepository
     {
-        public SliderRepository(EduDbContext context) : base(context)
+        public FacultyRepository(EduDbContext context) : base(context)
         {
 
         }

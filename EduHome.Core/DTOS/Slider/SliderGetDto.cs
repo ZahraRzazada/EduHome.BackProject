@@ -1,7 +1,7 @@
 ﻿using System;
 namespace EduHome.Core.DTOS;
 
-public class SliderGetDto
+public record SliderGetDto
 {
     public string Id { get; set; }
 	public string Title { get; set; } = null!;

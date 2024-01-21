@@ -3,17 +3,17 @@ using EduHome.Core.DTOS;
 
 namespace EduHome.Service.Services.Interfaces
 {
-	public interface ISliderService
+	public interface IPositionService
 	{
 
-        public Task<IEnumerable<SliderGetDto>> GetAllAsync();
+        //public Task<IEnumerable<PositionGetDto>> GetAllAsync();
 
-        public Task CreateAsync(SliderGetDto dto);
+        //public Task CreateAsync(PositionGetDto dto);
 
-        public Task RemoveAsync(int id);
+        //public Task RemoveAsync(int id);
 
-        public Task UpdateAsync(int id, SliderGetDto dto);
-        public Task<SliderGetDto> GetAsync(int id);
+        //public Task UpdateAsync(int id, PositionGetDto dto);
+        //public Task<PositionGetDto> GetAsync(int id);
     }
 }
 

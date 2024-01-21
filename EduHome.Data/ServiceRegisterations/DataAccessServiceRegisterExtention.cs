@@ -17,6 +17,11 @@ namespace EduHome.Data.ServiceRegisterations
             });
             services.AddScoped<ITestimoialRepository, TestimoialRepository>();
             services.AddScoped<ISliderRepository, SliderRepository>();
+            services.AddScoped<IDegreeRepository, DegreeRepository>();
+            services.AddScoped<IFacultyRepository, FacultyRepository>();
+            services.AddScoped<IPositionRepository, PositionRepository>();
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
+
         }
     }
 }

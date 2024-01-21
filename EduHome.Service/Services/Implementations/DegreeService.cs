@@ -7,76 +7,74 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EduHome.Service.Services.Implementations
 {
-    public class SliderService : ISliderService
+    public class DegreeService : IDegreeService
     {
-        readonly ISliderRepository _sliderRepository;
-        
-        public SliderService(ISliderRepository sliderRepository)
-        {
-            _sliderRepository = sliderRepository;
-        }
-        public async Task CreateAsync(SliderGetDto dto)
-        {
-            Slider slider = new Slider();
-            slider.Description = dto.Description;
-            slider.Image = dto.Image;
-            slider.Title = dto.Title;
-            await _sliderRepository.AddAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
-        }
-        public async Task<IEnumerable<SliderGetDto>> GetAllAsync()
-        {
-            IEnumerable<SliderGetDto> sliders = await _sliderRepository.GetQuery(x => !x.IsDeleted)
-               .AsNoTrackingWithIdentityResolution().Select(x => new SliderGetDto { Title = x.Title, Description = x.Description, Image = x.Image })
-               .ToListAsync();
-            return sliders;
-        }
-        public async Task<SliderGetDto> GetAsync(int id)
-        {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+        readonly IDegreeRepository _degreeRepository;
 
-            if (slider == null)
+        public DegreeService(IDegreeRepository degreeRepository)
+        {
+            _degreeRepository = degreeRepository;
+        }
+        public async Task CreateAsync(DegreePostDto dto)
+        {
+            Degree degree = new Degree();
+            degree.Name = dto.Name;
+         
+            await _degreeRepository.AddAsync(degree);
+            await _degreeRepository.SaveChangesAsync();
+        }
+        public async Task<IEnumerable<DegreeGetDto>> GetAllAsync()
+        {
+            IEnumerable<DegreeGetDto> degree = await _degreeRepository.GetQuery(x => !x.IsDeleted)
+               .AsNoTrackingWithIdentityResolution().Select(x => new DegreeGetDto { Name = x.Name })
+               .ToListAsync();
+            return degree;
+        }
+        public async Task<DegreeGetDto> GetAsync(int id)
+        {
+            Degree? degree = await _degreeRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+
+            if (degree == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("Degree Not Found");
             }
 
-            SliderGetDto slidergetdto = new SliderGetDto
+            DegreeGetDto degreeGetDto = new DegreeGetDto
             {
-            Title=slider.Title,
-            Description=slider.Description,
-            Image=slider.Image
+                Name = degree.Name,
+               
             };
-            return slidergetdto;
+            return degreeGetDto;
         }
 
         public async Task RemoveAsync(int id)
         {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            Degree? degree = await _degreeRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
 
-            if (slider == null)
+            if (degree == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("Degree Not Found");
             }
-            slider.IsDeleted = true;
-            await _sliderRepository.UpdateAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
+            degree.IsDeleted = true;
+            await _degreeRepository.UpdateAsync(degree);
+            await _degreeRepository.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(int id, SliderGetDto dto)
+        public async Task UpdateAsync(int id, DegreePostDto dto)
         {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            Degree? degree = await _degreeRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
 
-            if (slider == null)
+            if (degree == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("Degree Not Found");
             }
 
-            slider.Title = dto.Title;
-            slider.Description = dto.Description;
-            slider.Image = dto.Image;
+            degree.Name = dto.Name;
 
-            await _sliderRepository.UpdateAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
+  
+
+            await _degreeRepository.UpdateAsync(degree);
+            await _degreeRepository.SaveChangesAsync();
         }
 
     }

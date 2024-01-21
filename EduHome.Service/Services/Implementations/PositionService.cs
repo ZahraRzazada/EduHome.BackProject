@@ -7,78 +7,77 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EduHome.Service.Services.Implementations
 {
-    public class SliderService : ISliderService
+    public class PositionService : IPositionService
     {
-        readonly ISliderRepository _sliderRepository;
-        
-        public SliderService(ISliderRepository sliderRepository)
-        {
-            _sliderRepository = sliderRepository;
-        }
-        public async Task CreateAsync(SliderGetDto dto)
-        {
-            Slider slider = new Slider();
-            slider.Description = dto.Description;
-            slider.Image = dto.Image;
-            slider.Title = dto.Title;
-            await _sliderRepository.AddAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
-        }
-        public async Task<IEnumerable<SliderGetDto>> GetAllAsync()
-        {
-            IEnumerable<SliderGetDto> sliders = await _sliderRepository.GetQuery(x => !x.IsDeleted)
-               .AsNoTrackingWithIdentityResolution().Select(x => new SliderGetDto { Title = x.Title, Description = x.Description, Image = x.Image })
-               .ToListAsync();
-            return sliders;
-        }
-        public async Task<SliderGetDto> GetAsync(int id)
-        {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
 
-            if (slider == null)
+        readonly IPositionRepository _positionRepository;
+
+        public PositionService(IPositionRepository positionRepository)
+        {
+            _positionRepository = positionRepository;
+        }
+
+        public async Task CreateAsync(PositionPostDto dto)
+        {
+            Position position = new Position();
+            position.Name = dto.Name;
+
+            await _positionRepository.AddAsync(position);
+            await _positionRepository.SaveChangesAsync();
+        }
+        public async Task<IEnumerable<PositionGetDto>> GetAllAsync()
+        {
+            IEnumerable<PositionGetDto> positionGetDtos = await _positionRepository.GetQuery(x => !x.IsDeleted)
+               .AsNoTrackingWithIdentityResolution().Select(x => new PositionGetDto { Name = x.Name })
+               .ToListAsync();
+            return positionGetDtos;
+        }
+        public async Task<PositionGetDto> GetAsync(int id)
+        {
+            Position? position = await _positionRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+
+            if (position == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("Position Not Found");
             }
 
-            SliderGetDto slidergetdto = new SliderGetDto
+            PositionGetDto positionGetDto = new PositionGetDto
             {
-            Title=slider.Title,
-            Description=slider.Description,
-            Image=slider.Image
+                Name = position.Name,
+
             };
-            return slidergetdto;
+            return positionGetDto;
         }
 
         public async Task RemoveAsync(int id)
         {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            Position? position = await _positionRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
 
-            if (slider == null)
+            if (position == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("Position Not Found");
             }
-            slider.IsDeleted = true;
-            await _sliderRepository.UpdateAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
+            position.IsDeleted = true;
+            await _positionRepository.UpdateAsync(position);
+            await _positionRepository.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(int id, SliderGetDto dto)
+        public async Task UpdateAsync(int id, PositionPostDto dto)
         {
-            Slider? slider = await _sliderRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            Position? position = await _positionRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
 
-            if (slider == null)
+            if (position == null)
             {
-                throw new ItemNotFoundExcpetion("Slider Not Found");
+                throw new ItemNotFoundExcpetion("Position Not Found");
             }
 
-            slider.Title = dto.Title;
-            slider.Description = dto.Description;
-            slider.Image = dto.Image;
+            position.Name = dto.Name;
 
-            await _sliderRepository.UpdateAsync(slider);
-            await _sliderRepository.SaveChangesAsync();
+
+
+            await _positionRepository.UpdateAsync(position);
+            await _positionRepository.SaveChangesAsync();
         }
-
     }
 }
 
