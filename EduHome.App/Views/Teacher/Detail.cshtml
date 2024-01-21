@@ -25,20 +25,27 @@
         <div class="row">
             <div class="col-md-5 col-sm-5 col-xs-12">
                 <div class="teacher-details-img">
-                    <img src="~/assets/img/teacher/@Model.Image" alt="teacher">
+                    <img  style="width: 600px; height: 500px;" src="~/assets/img/teacher/@Model.Image" alt="teacher">
                 </div>
             </div>
             <div class="col-md-7 col-sm-7 col-xs-12">
                 <div class="teacher-details-content ml-50">
                     <h2>@Model.FullName</h2>
-                    <h5>@Model.Position</h5>
+                    <h5>@Model.Position.Name</h5>
                     <h4>about me</h4>
-                    <p>@Model.Info </p>
+                    <p>@Model.Info</p>
                     <ul>
                         <li><span>degree: </span>@Model.Degree.Name</li>
                         <li><span>experience: </span>7 years experience</li>
                         <li><span>hobbies: </span>@Model.Hobby.Name</li>
-                        <li><span>faculty: </span>@Model.Faculties</li>
+                        <li>
+                            <span>faculty: </span>
+                            @foreach (FacultyGetDto item in Model.Faculties)
+                            {
+                                <a href="#">@item.Name</a>
+
+                            }
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -65,19 +72,18 @@
                 <div class="skill-wrapper">
                     <div class="row">
                         @foreach (var item in Model.Skills)
-                        {
+                            {
                             <div class="col-sm-4">
                                 <div class="skill-bar-item">
                                     <span>@item.Key</span>
                                     <div class="progress">
                                         <div data-wow-delay="1.2s" data-wow-duration="1.5s" style="width: 85%; visibility: visible; animation-duration: 1.5s; animation-delay: 1.2s; animation-name: fadeInLeft;" data-progress="50%" class="progress-bar wow fadeInLeft">
-                                            <span class="text-top">@item.Value</span>
+                                            <span class="text-top">@item.Value %</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         }
-
                     </div>
                 </div>
             </div>

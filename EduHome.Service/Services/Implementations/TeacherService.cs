@@ -144,6 +144,7 @@ namespace EduHome.Service.Services.Implementations
             TeacherGetDto? teacher = await query.Select(x => new TeacherGetDto
             {
                 Id = x.Id,
+                Info=x.Info,
                 Skills = x.Skills,
                 SocialNetworks = x.SocialNetworks,
                 Image = x.Image,
