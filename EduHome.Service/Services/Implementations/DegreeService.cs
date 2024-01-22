@@ -19,7 +19,7 @@ namespace EduHome.Service.Services.Implementations
         {
             Degree degree = new Degree();
             degree.Name = dto.Name;
-         
+
             await _degreeRepository.AddAsync(degree);
             await _degreeRepository.SaveChangesAsync();
         }
@@ -42,7 +42,7 @@ namespace EduHome.Service.Services.Implementations
             DegreeGetDto degreeGetDto = new DegreeGetDto
             {
                 Name = degree.Name,
-               
+
             };
             return degreeGetDto;
         }
@@ -71,7 +71,7 @@ namespace EduHome.Service.Services.Implementations
 
             degree.Name = dto.Name;
 
-  
+
 
             await _degreeRepository.UpdateAsync(degree);
             await _degreeRepository.SaveChangesAsync();

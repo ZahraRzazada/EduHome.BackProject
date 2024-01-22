@@ -19,6 +19,10 @@ namespace EduHome.Data.Contexts
         public DbSet<TeacherFaculty> TeacherFaculties { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Skill> Skills { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Tag> Tags { get; set; }
         public DbSet<SocialNetwork> SocialNetworks { get; set; }
 
 

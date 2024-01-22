@@ -18,6 +18,10 @@
     <None Remove="DTOS\Position\" />
     <None Remove="DTOS\Teacher\" />
     <None Remove="DTOS\Hobby\" />
+    <None Remove="DTOS\Author\" />
+    <None Remove="DTOS\Blog\" />
+    <None Remove="DTOS\Category\" />
+    <None Remove="DTOS\Tag\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -31,6 +35,10 @@
     <Folder Include="DTOS\Position\" />
     <Folder Include="DTOS\Teacher\" />
     <Folder Include="DTOS\Hobby\" />
+    <Folder Include="DTOS\Author\" />
+    <Folder Include="DTOS\Blog\" />
+    <Folder Include="DTOS\Category\" />
+    <Folder Include="DTOS\Tag\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">

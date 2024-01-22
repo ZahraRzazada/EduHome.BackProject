@@ -6,7 +6,6 @@ namespace EduHome.Core.Entities
 {
 	public class Testimonial:BaseEntity
 	{
-    
         [StringLength(300)]
 		public string Text { get; set; } = null!;
         [StringLength(20)]

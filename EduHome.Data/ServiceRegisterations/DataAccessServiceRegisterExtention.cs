@@ -21,6 +21,12 @@ namespace EduHome.Data.ServiceRegisterations
             services.AddScoped<IFacultyRepository, FacultyRepository>();
             services.AddScoped<IPositionRepository, PositionRepository>();
             services.AddScoped<ITeacherRepository, TeacherRepository>();
+            services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ITagRepository, TagRepository>();
+
+
 
         }
     }

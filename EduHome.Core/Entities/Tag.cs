@@ -1,11 +1,12 @@
 ﻿using System;
+using EduHome.Core.Entities.BaseEntities;
+
 namespace EduHome.Core.Entities
 {
-	public class Tag
+	public class Tag:BaseEntity
 	{
-		public Tag()
-		{
-		}
-	}
+        public string Name { get; set; } = null!;
+        public List<TagBlog> TagBlogs { get; set; }
+    }
 }
 

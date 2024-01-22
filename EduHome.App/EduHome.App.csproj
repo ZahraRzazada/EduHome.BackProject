@@ -10,15 +10,31 @@
     <None Remove="Controllers\" />
     <None Remove="ViewModels\" />
     <None Remove="Views\" />
+    <None Remove="Views\Blog\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Admin\Controllers\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Areas\Admin\Views\Home\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
     <Folder Include="wwwroot\" />
+    <Folder Include="Views\Blog\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\Admin\Views\Home\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="wwwroot\admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\admin\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EduHome.Service\EduHome.Service.csproj">

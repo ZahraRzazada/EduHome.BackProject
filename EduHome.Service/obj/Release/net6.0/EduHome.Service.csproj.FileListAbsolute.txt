@@ -1,0 +1,17 @@
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/bin/Release/net6.0/EduHome.Service.deps.json
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/bin/Release/net6.0/EduHome.Service.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/bin/Release/net6.0/EduHome.Service.pdb
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/bin/Release/net6.0/EduHome.Core.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/bin/Release/net6.0/EduHome.Data.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/bin/Release/net6.0/EduHome.Data.pdb
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/bin/Release/net6.0/EduHome.Core.pdb
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/EduHome.Service.csproj.AssemblyReference.cache
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/EduHome.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/EduHome.Service.AssemblyInfoInputs.cache
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/EduHome.Service.AssemblyInfo.cs
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/EduHome.Service.csproj.CoreCompileInputs.cache
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/EduHome.Service.csproj.CopyComplete
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/EduHome.Service.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/refint/EduHome.Service.dll
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/EduHome.Service.pdb
+/Users/zahrarzazada/Projects/EduHome/EduHome.Service/obj/Release/net6.0/ref/EduHome.Service.dll
