@@ -58,6 +58,8 @@
                     </div>
                 </div>
             </div>
+        
+    
             <div class="col-md-4">
                 <div class="blog-sidebar right">
                     <div class="single-blog-widget mb-47">
@@ -73,38 +75,37 @@
                     </div>
                     <div class="single-blog-widget mb-47">
                         <h3>categories</h3>
-                        @*<ul>
-                            <li><a href="#">CSS Engineering (10)</a></li>
-                            <li><a href="#">Political Science (12)</a></li>
-                            <li><a href="#">Micro Biology (08)</a></li>
-                            <li><a href="#">HTML5 &amp; CSS3 (15)</a></li>
-                            <li><a href="#">Web Design (20)</a></li>
-                            <li><a href="#">PHP (23)</a></li>
-                        </ul>*@
+                        <ul>
+                            @foreach (var item in ViewBag.Categorys)
+                            {
+                                 <ul>
+                                     <li href="blog-details.html" class="mr-10 mb-10">@item.Name (@item.Count)</li>
+                                 </ul>
+                            }
+                        </ul>
                     </div>
+                </div>
+           
                     <div class="single-blog-widget mb-47">
                         <div class="single-blog-banner">
-                            <a href="blog-details.html" id="blog"><img src="img/blog/blog-img.jpg" alt="blog"></a>
+                            <a href="blog-details.html" id="blog" ><img src="~/assets/img/blog/blog-img.jpg" alt="blog"></a>
                             <h2>best<br> eductaion<br> theme</h2>
                         </div>
                     </div>
-                    @foreach (var blog in Model)
-                    {
-                        <div class="single-post mb-30">
-                            <div class="single-post-img">
-                                <a href="blog-details.html" style="width:100px; height:100px">
-                                    <img src="~/assets/img/blog/@blog.Image" alt="post">
-                                    <div class="blog-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="single-post-content">
-                                <h4><a href="blog-details.html">@blog.Title</a></h4>
-                                <p>@blog.AuthorGetDto.FullName  /  @blog.Date.ToString("dd.MM.yyyy")</p>
-                            </div>
+                    <div class="single-blog-widget mb-47">
+                        <h3>latest post</h3>
+              
+                    </div>
+                    <div class="single-blog-widget">
+                        <h3>tags</h3>
+                        <div class="single-tag">
+                            @foreach (var item in ViewBag.Tags)
+                            {
+                                <a href="blog-details.html" class="mr-10 mb-10">@item.Name</a>
+
+                            }
                         </div>
-                    }
+                    </div>
                 </div>
             </div>
         </div>
