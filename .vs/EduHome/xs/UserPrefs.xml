@@ -1,61 +1,59 @@
 ﻿<Properties StartupConfiguration="{A91A4460-83CB-4596-8049-BEF686681242}|Default">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="EduHome.Core/Entities/TagBlog.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EduHome.Data/Migrations/20240123083834_CoursePartOk.Designer.cs">
     <Files>
       <File FileName="EduHome.Core/Entities/Skill.cs" />
-      <File FileName="EduHome.Core/Entities/Course.cs" Line="6" Column="32" />
-      <File FileName="EduHome.Core/DTOS/Course/CoursePostDto.cs" Line="18" Column="63" />
-      <File FileName="EduHome.Core/Entities/Blog.cs" Line="16" Column="1" />
+      <File FileName="EduHome.Core/Entities/Course.cs" />
+      <File FileName="EduHome.Core/DTOS/Course/CoursePostDto.cs" />
+      <File FileName="EduHome.Core/Entities/Blog.cs" />
       <File FileName="EduHome.Core/Entities/Teacher.cs" />
-      <File FileName="EduHome.Core/Entities/TagBlog.cs" Line="13" Column="6" />
+      <File FileName="EduHome.Core/Entities/TagBlog.cs" />
       <File FileName="EduHome.Core/Entities/Category.cs" />
       <File FileName="EduHome.Core/DTOS/Teacher/TeacherGetDto.cs" />
       <File FileName="EduHome.Core/DTOS/Teacher/TeacherPostDto.cs" />
       <File FileName="EduHome.Core/DTOS/Blog/BlogPostDto.cs" />
       <File FileName="EduHome.Core/DTOS/Blog/BlogGetDto.cs" />
-      <File FileName="EduHome.Data/Contexts/EduDbContext.cs" />
+      <File FileName="EduHome.Data/Contexts/EduDbContext.cs" Line="30" Column="53" />
       <File FileName="EduHome.Core/Repositories/ICourseRepository.cs" />
       <File FileName="EduHome.Core/Repositories/IDegreeRepository.cs" />
       <File FileName="EduHome.Data/Repositories/CourseRepository.cs" />
-      <File FileName="EduHome.Data/ServiceRegisterations/DataAccessServiceRegisterExtention.cs" />
+      <File FileName="EduHome.Data/ServiceRegisterations/DataAccessServiceRegisterExtention.cs" Line="19" Column="13" />
       <File FileName="EduHome.Service/ServiceRegistrations/ServiceLaierServiceRegisterExtention.cs" />
       <File FileName="EduHome.Service/Services/Interfaces/ICourseService.cs" />
       <File FileName="EduHome.Service/Services/Implementations/TeacherService.cs" />
       <File FileName="EduHome.Service/Services/Interfaces/ITeacherService.cs" />
-      <File FileName="EduHome.Service/Services/Implementations/CourseService.cs" Line="9" Column="1" />
-      <File FileName="EduHome.Service/Services/Interfaces/ITagService.cs" Line="1" Column="1" />
-      <File FileName="EduHome.Service/Services/Implementations/TagService.cs" Line="1" Column="1" />
-      <File FileName="EduHome.Service/Services/Implementations/CategoryService.cs" Line="3" Column="33" />
-      <File FileName="EduHome.App/Views/Course/Index.cshtml" Line="52" Column="43" />
-      <File FileName="EduHome.Core/DTOS/Course/CourseGetDto.cs" Line="8" Column="50" />
-      <File FileName="EduHome.App/Controllers/CourseController.cs" Line="53" Column="39" />
-      <File FileName="EduHome.App/Controllers/BlogController.cs" Line="41" Column="42" />
-      <File FileName="EduHome.App/Controllers/ContactController.cs" Line="1" Column="1" />
-      <File FileName="EduHome.Core/Entities/Feature.cs" Line="1" Column="1" />
-      <File FileName="EduHome.App/Views/Course/Detail.cshtml" Line="128" Column="31" />
-      <File FileName="EduHome.App/Views/Teacher/Detail.cshtml" Line="74" Column="18" />
-      <File FileName="EduHome.App/Views/Blog/Detail.cshtml" Line="102" Column="26" />
-      <File FileName="EduHome.Core/Entities/Tag.cs" Line="10" Column="54" />
-      <File FileName="EduHome.Core/Entities/TagCourse.cs" Line="8" Column="39" />
+      <File FileName="EduHome.Service/Services/Implementations/CourseService.cs" />
+      <File FileName="EduHome.Service/Services/Interfaces/ITagService.cs" />
+      <File FileName="EduHome.Service/Services/Implementations/TagService.cs" />
+      <File FileName="EduHome.Service/Services/Implementations/CategoryService.cs" />
+      <File FileName="EduHome.App/Views/Course/Index.cshtml" />
+      <File FileName="EduHome.Core/DTOS/Course/CourseGetDto.cs" />
+      <File FileName="EduHome.App/Controllers/CourseController.cs" />
+      <File FileName="EduHome.App/Controllers/BlogController.cs" />
+      <File FileName="EduHome.App/Controllers/ContactController.cs" />
+      <File FileName="EduHome.Core/Entities/Feature.cs" />
+      <File FileName="EduHome.App/Views/Course/Detail.cshtml" />
+      <File FileName="EduHome.App/Views/Teacher/Detail.cshtml" />
+      <File FileName="EduHome.App/Views/Blog/Detail.cshtml" />
+      <File FileName="EduHome.Core/Entities/Tag.cs" />
+      <File FileName="EduHome.Core/Entities/TagCourse.cs" />
+      <File FileName="EduHome.Data/Migrations/20240123083834_CoursePartOk.Designer.cs" Line="1" Column="1" />
+      <File FileName="EduHome.Data/Migrations/20240123083834_CoursePartOk.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EduHome" expanded="True">
-            <Node name="EduHome.App">
-              <Node name="Views">
-                <Node name="Blog" expanded="True" />
-                <Node name="Teacher" expanded="True" />
-              </Node>
+            <Node name="EduHome.Core" expanded="True">
+              <Node name="Entities" expanded="True" />
             </Node>
-            <Node name="EduHome.Core">
-              <Node name="DTOS" expanded="True">
-                <Node name="Course" expanded="True" />
+            <Node name="EduHome.Data" expanded="True">
+              <Node name="Contexts" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20240123083834_CoursePartOk.Designer.cs" selected="True" />
               </Node>
-              <Node name="Entities">
-                <Node name="TagBlog.cs" selected="True" />
-              </Node>
+              <Node name="ServiceRegisterations" expanded="True" />
             </Node>
           </Node>
         </State>

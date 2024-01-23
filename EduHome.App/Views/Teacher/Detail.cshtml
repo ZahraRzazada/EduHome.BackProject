@@ -36,13 +36,18 @@
                     <p>@Model.Info</p>
                     <ul>
                         <li><span>degree: </span>@Model.Degree.Name</li>
-                        <li><span>experience: </span>7 years experience</li>
-                        <li><span>hobbies: </span>@Model.Hobby.Name</li>
+                        <li><span>experience: </span>@Model.Experience years experience</li>
                         <li>
+                            <span>hobbies: </span>
+                            @foreach (HobbyGetDto item in Model.Hobbies)
+                            {
+                                <a href="#">@item.Name ;</a>
+                            }
+<li>
                             <span>faculty: </span>
                             @foreach (FacultyGetDto item in Model.Faculties)
                             {
-                                <a href="#">@item.Name</a>
+                                <a href="#">@item.Name ;</a>
 
                             }
                         </li>

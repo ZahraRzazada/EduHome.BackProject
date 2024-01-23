@@ -41,7 +41,7 @@
                     <div class="single-course mb-70">
                         <div class="course-img">
                             <a href="course-details.html">
-                                <img src="~/assets/img/course/@item.Image" alt="course">
+                                <a asp-controller="course" asp-action="detail" asp-route-id="@item.Id"><img src="~/assets/img/course/@item.Image" alt="teacher"></a>
                                 <div class="course-hover">
                                     <i class="fa fa-link"></i>
                                 </div>

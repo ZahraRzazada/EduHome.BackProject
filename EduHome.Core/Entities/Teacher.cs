@@ -12,10 +12,10 @@ namespace EduHome.Core.Entities
         public List<SocialNetwork> SocialNetworks { get; set; }
         public int PositionId { get; set; }
         public int DegreeId { get; set; }
-        public int HobbyId { get; set; }    
+        public int Experience { get; set; }
         public Position Position { get; set; }
         public Degree Degree { get; set; }
-        public Hobby Hobby { get; set; }
+        public List<TeacherHobbies> TeacherHobbies { get; set; }
         public List<Skill> Skills { get; set; } = null!;
         public List<TeacherFaculty> TeacherFaculties { get; set; }
         public string Storage { get; set; } = null!;

@@ -114,7 +114,7 @@ namespace EduHome.Service.Services.Implementations
 
         public async Task<CourseGetDto> GetAsync(int id)
         {
-            Course? course = await _courseRepository.GetAsync(x => !x.IsDeleted && x.Id == id, "TagBlogs.Tag", "Category", "Skills");
+            Course? course = await _courseRepository.GetAsync(x => !x.IsDeleted && x.Id == id, "TagCourses.Tag", "Category", "Features");
 
             if (course == null)
             {

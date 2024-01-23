@@ -26,5 +26,7 @@ namespace EduHome.Data.Contexts
         public DbSet<SocialNetwork> SocialNetworks { get; set; }
         public DbSet<Feature> Features { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<TagCourse> TagCourses { get; set; }
+        public DbSet<TagBlog> TagBlogs { get; set; }
     }
 }

@@ -6,7 +6,8 @@ namespace EduHome.Core.Entities
 	public class Hobby:BaseEntity
     {
         public string Name { get; set; } = null!;
-        public List<Teacher> Teachers { get; set; }
+        public List<TeacherHobbies> TeacherHobbies { get; set; }
+
     }
 }
 

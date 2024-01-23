@@ -36,7 +36,7 @@ namespace EduHome.Service.Services.Implementations
               Info=dto.Info,
               FullName=dto.FullName,
               DegreeId=dto.DegreeId,
-              HobbyId=dto.HobbyId,
+              Experience=dto.Experience,
               PositionId=dto.PositionId,
               Skills=new List<Skill>(),
               SocialNetworks=new List<SocialNetwork>(),
@@ -73,15 +73,8 @@ namespace EduHome.Service.Services.Implementations
                     Value = dto.SkillValues[i],
                 });
             }
-            //for (int i = 0; i < dto.SkillKeys.Count(); i++)
-            //{
-            //    teacher.Skills.Add(new Skill
-            //    {
-            //        Teacher = teacher,
-            //        Key = dto.SkillKeys[i],
-            //        Value = dto.SkillValues[i],
-            //    });
-            //}
+
+     
             if (dto.Icons == null || dto.Urls == null || dto.Icons.Count() != dto.Urls.Count())
             {
                 commonResponse.StatusCode = 400;
@@ -135,7 +128,8 @@ namespace EduHome.Service.Services.Implementations
             var query = _teacherRepository.GetQuery(x => x.IsDeleted == false && x.Id == id)
                 .Include(x => x.TeacherFaculties)
                 .ThenInclude(x => x.Faculty)
-                .Include(x => x.Hobby)
+                .Include(x => x.TeacherHobbies)
+                .ThenInclude(x=>x.Hobby)
                 .Include(x => x.Degree)
                 .Include(x => x.Position)
                 .Include(x => x.SocialNetworks)
@@ -144,16 +138,16 @@ namespace EduHome.Service.Services.Implementations
             TeacherGetDto? teacher = await query.Select(x => new TeacherGetDto
             {
                 Id = x.Id,
-                Info=x.Info,
+                Experience = x.Experience,
+                Info =x.Info,
                 Skills = x.Skills,
+                Hobbies=x.TeacherHobbies.Select(y=> new HobbyGetDto { Name=y.Hobby.Name}),
                 SocialNetworks = x.SocialNetworks,
                 Image = x.Image,
                 FullName = x.FullName,
                 DegreeId = x.DegreeId,
-                HobbyId = x.HobbyId,
                 PositionId = x.PositionId,
                 Degree = new DegreeGetDto { Name = x.Degree.Name },
-                Hobby = new HobbyGetDto { Name = x.Hobby.Name },
                 Position = new PositionGetDto { Name = x.Position.Name },
                 Faculties = x.TeacherFaculties.Select(y => new FacultyGetDto { Name = y.Faculty.Name })
             }).FirstOrDefaultAsync();
@@ -223,7 +217,8 @@ namespace EduHome.Service.Services.Implementations
             Teacher? teacher = await _teacherRepository.GetQuery(x => x.IsDeleted == false && x.Id == id)
                 .Include(x => x.TeacherFaculties)
                 .ThenInclude(x => x.Faculty)
-                .Include(x => x.Hobby)
+                .Include(x => x.TeacherHobbies)
+                .ThenInclude(x => x.Hobby)
                 .Include(x => x.Degree)
                 .Include(x => x.Position)
                 .Include(x => x.SocialNetworks)
@@ -238,16 +233,24 @@ namespace EduHome.Service.Services.Implementations
             teacher.FullName = dto.FullName;
             teacher.Info = dto.Info;
             teacher.PositionId = dto.PositionId;
-            teacher.HobbyId = dto.HobbyId;
+            teacher.Experience = dto.Experience;
             teacher.DegreeId = dto.DegreeId;
             teacher.TeacherFaculties.Clear();
-
+            teacher.TeacherHobbies.Clear();
             foreach (var item in dto.FacultyIds)
             {
                 teacher.TeacherFaculties.Add(new TeacherFaculty
                 {
                     Teacher = teacher,
                     FacultyId = item,
+                });
+            }
+            foreach (var item in dto.HobbyIds)
+            {
+                teacher.TeacherHobbies.Add(new TeacherHobbies
+                {
+                    Teacher = teacher,
+                    HobbyId = item,
                 });
             }
             teacher.SocialNetworks.Clear();
@@ -297,6 +300,7 @@ namespace EduHome.Service.Services.Implementations
                 teacher.SocialNetworks.Add(socialNetwork);
             }
         }
+
         private async Task<bool> CheckPosition(int id)
         {
             return await _positionrepository.GetQuery(x => !x.IsDeleted && x.Id == id).CountAsync() > 0;

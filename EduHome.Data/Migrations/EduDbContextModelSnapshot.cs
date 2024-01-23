@@ -473,7 +473,7 @@ namespace EduHome.Data.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("TagBlog");
+                    b.ToTable("TagBlogs");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.TagCourse", b =>
@@ -505,7 +505,7 @@ namespace EduHome.Data.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("TagCourse");
+                    b.ToTable("TagCourses");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.Teacher", b =>
@@ -522,12 +522,12 @@ namespace EduHome.Data.Migrations
                     b.Property<int>("DegreeId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Experience")
+                        .HasColumnType("int");
+
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("HobbyId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -553,8 +553,6 @@ namespace EduHome.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("DegreeId");
-
-                    b.HasIndex("HobbyId");
 
                     b.HasIndex("PositionId");
 
@@ -591,6 +589,38 @@ namespace EduHome.Data.Migrations
                     b.HasIndex("TeacherId");
 
                     b.ToTable("TeacherFaculties");
+                });
+
+            modelBuilder.Entity("EduHome.Core.Entities.TeacherHobbies", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("HobbyId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HobbyId");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("TeacherHobbies");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.Testimonial", b =>
@@ -743,12 +773,6 @@ namespace EduHome.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EduHome.Core.Entities.Hobby", "Hobby")
-                        .WithMany("Teachers")
-                        .HasForeignKey("HobbyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("EduHome.Core.Entities.Position", "Position")
                         .WithMany("Teachers")
                         .HasForeignKey("PositionId")
@@ -756,8 +780,6 @@ namespace EduHome.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Degree");
-
-                    b.Navigation("Hobby");
 
                     b.Navigation("Position");
                 });
@@ -777,6 +799,25 @@ namespace EduHome.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Faculty");
+
+                    b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("EduHome.Core.Entities.TeacherHobbies", b =>
+                {
+                    b.HasOne("EduHome.Core.Entities.Hobby", "Hobby")
+                        .WithMany("TeacherHobbies")
+                        .HasForeignKey("HobbyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EduHome.Core.Entities.Teacher", "Teacher")
+                        .WithMany("TeacherHobbies")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hobby");
 
                     b.Navigation("Teacher");
                 });
@@ -817,7 +858,7 @@ namespace EduHome.Data.Migrations
 
             modelBuilder.Entity("EduHome.Core.Entities.Hobby", b =>
                 {
-                    b.Navigation("Teachers");
+                    b.Navigation("TeacherHobbies");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.Position", b =>
@@ -839,6 +880,8 @@ namespace EduHome.Data.Migrations
                     b.Navigation("SocialNetworks");
 
                     b.Navigation("TeacherFaculties");
+
+                    b.Navigation("TeacherHobbies");
                 });
 #pragma warning restore 612, 618
         }
