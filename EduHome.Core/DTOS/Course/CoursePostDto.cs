@@ -6,6 +6,7 @@ namespace EduHome.Core.DTOS
 {
 	public class CoursePostDto
 	{
+        public string Name { get; set; } = null!;
         public string Title { get; set; } = null!;
         public string Description { get; set; } = null!;
         public IFormFile? ImageFile { get; set; }

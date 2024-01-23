@@ -30,6 +30,7 @@ namespace EduHome.Service.Services.Implementations
 
             Course course = new Course
             {
+                Name = dto.Name,
                 Certification=dto.Certification,
                 Apply=dto.Apply,
                 About=dto.About,
@@ -95,6 +96,7 @@ namespace EduHome.Service.Services.Implementations
               .Select(x =>
               new CourseGetDto
               {
+                  Name=x.Name,
                   Title = x.Title,
                   Id = x.Id,
                   About=x.About,
@@ -121,6 +123,7 @@ namespace EduHome.Service.Services.Implementations
 
             CourseGetDto courseGetDto = new CourseGetDto
             {
+                Name=course.Name,
                 Id = course.Id,
                 Date = course.CreatedAt,
                 Description = course.Description,
@@ -164,6 +167,7 @@ namespace EduHome.Service.Services.Implementations
             {
                 throw new ItemNotFoundExcpetion("Blog Not Found");
             }
+            course.Name = dto.Name;
             course.Title = dto.Title;
             course.Description = dto.Description;
             course.Apply = dto.Apply;

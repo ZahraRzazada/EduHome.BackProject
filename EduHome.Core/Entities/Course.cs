@@ -5,6 +5,7 @@ namespace EduHome.Core.Entities
 {
 	public class Course:BaseEntity
 	{
+        public string Name { get; set; } = null!;
         public string Title { get; set; } = null!;
         public string Description { get; set; } = null!;
         public string About { get; set; } = null!;
