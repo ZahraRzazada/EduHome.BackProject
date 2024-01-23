@@ -22,6 +22,7 @@
     <None Remove="DTOS\Blog\" />
     <None Remove="DTOS\Category\" />
     <None Remove="DTOS\Tag\" />
+    <None Remove="DTOS\Course\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -39,6 +40,7 @@
     <Folder Include="DTOS\Blog\" />
     <Folder Include="DTOS\Category\" />
     <Folder Include="DTOS\Tag\" />
+    <Folder Include="DTOS\Course\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">

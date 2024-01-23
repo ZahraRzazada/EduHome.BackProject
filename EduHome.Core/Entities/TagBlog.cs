@@ -9,6 +9,8 @@ namespace EduHome.Core.Entities
         public int BlogId { get; set; }
         public Tag Tag { get; set; } = null!;
         public Blog Blog { get; set; } = null!;
+        public int CourseId { get; set; }
+        public Course Course { get; set; } = null!;
     }
 }
 

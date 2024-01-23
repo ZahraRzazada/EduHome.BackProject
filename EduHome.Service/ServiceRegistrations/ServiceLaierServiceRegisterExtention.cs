@@ -18,6 +18,7 @@ namespace EduHome.Service.ServiceRegistrations
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<ITagService, TagService>();
+            services.AddScoped<ICourseService, CourseService>();
         }
 	}
 }

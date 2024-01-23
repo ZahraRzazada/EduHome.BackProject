@@ -73,15 +73,15 @@ namespace EduHome.Service.Services.Implementations
                     Value = dto.SkillValues[i],
                 });
             }
-            for (int i = 0; i < dto.SkillKeys.Count(); i++)
-            {
-                teacher.Skills.Add(new Skill
-                {
-                    Teacher = teacher,
-                    Key = dto.SkillKeys[i],
-                    Value = dto.SkillValues[i],
-                });
-            }
+            //for (int i = 0; i < dto.SkillKeys.Count(); i++)
+            //{
+            //    teacher.Skills.Add(new Skill
+            //    {
+            //        Teacher = teacher,
+            //        Key = dto.SkillKeys[i],
+            //        Value = dto.SkillValues[i],
+            //    });
+            //}
             if (dto.Icons == null || dto.Urls == null || dto.Icons.Count() != dto.Urls.Count())
             {
                 commonResponse.StatusCode = 400;

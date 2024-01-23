@@ -24,8 +24,7 @@ namespace EduHome.Data.Contexts
         public DbSet<Category> Categories { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<SocialNetwork> SocialNetworks { get; set; }
-
-
-        
+        public DbSet<Feature> Features { get; set; }
+        public DbSet<Course> Courses { get; set; }
     }
 }
