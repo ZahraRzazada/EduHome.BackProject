@@ -37,7 +37,7 @@ namespace EduHome.Service.Services.Implementations
                 Features=new List<Feature>(),
                 Description = dto.Description,
                 Title = dto.Title,
-                TagBlogs = new List<TagBlog>(),
+                TagCourses = new List<TagCourse>(),
                 CategoryId = dto.CategoryId
             };
 
@@ -66,9 +66,9 @@ namespace EduHome.Service.Services.Implementations
 
             foreach (var item in dto.TagsIds)
             {
-               course.TagBlogs.Add(new TagBlog
+               course.TagCourses.Add(new TagCourse
             {
-                Course = course,
+                Course  = course,
                 TagId = item,
              });
             }
@@ -90,7 +90,7 @@ namespace EduHome.Service.Services.Implementations
         {
             IEnumerable<CourseGetDto> Courses = await _courseRepository.GetQuery(x => !x.IsDeleted)
               .AsNoTrackingWithIdentityResolution()
-              .Include(x => x.TagBlogs)
+              .Include(x => x.TagCourses)
               .ThenInclude(x => x.Tag)
               .Include(x => x.Category)
               .Select(x =>
@@ -103,7 +103,7 @@ namespace EduHome.Service.Services.Implementations
                   Apply=x.Apply,
                   Certification=x.Certification,
                   Description = x.Description,
-                  tags = x.TagBlogs.Select(y => new TagGetDto { Name = y.Tag.Name }),
+                  tags = x.TagCourses.Select(y => new TagGetDto { Name = y.Tag.Name }),
                   Image = x.Image,
                   Date = x.CreatedAt,
                   CategoryGetDto = new CategoryGetDto { Name = x.Category.Name }
@@ -131,7 +131,7 @@ namespace EduHome.Service.Services.Implementations
                 Apply=course.Apply,
                 Certification=course.Certification,
                 Image = course.Image,
-                tags = course.TagBlogs.Select(x => new TagGetDto { Name = x.Tag.Name, Id = x.Tag.Id }),
+                tags = course.TagCourses.Select(x => new TagGetDto { Name = x.Tag.Name, Id = x.Tag.Id }),
                 Title = course.Title,
                 CategoryGetDto = new CategoryGetDto
                 {
@@ -203,11 +203,11 @@ namespace EduHome.Service.Services.Implementations
 
                 course.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "img/course");
             }
-            course.TagBlogs.Clear();
+            course.TagCourses.Clear();
 
             foreach (var item in dto.TagsIds)
             {
-                course.TagBlogs.Add(new TagBlog
+                course.TagCourses.Add(new TagCourse
                 {
                     Course = course,
                     TagId = item,

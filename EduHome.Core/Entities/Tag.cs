@@ -7,6 +7,7 @@ namespace EduHome.Core.Entities
 	{
         public string Name { get; set; } = null!;
         public List<TagBlog> TagBlogs { get; set; }
+        public List<TagCourse> TagCourses { get; set; }
     }
 }
 

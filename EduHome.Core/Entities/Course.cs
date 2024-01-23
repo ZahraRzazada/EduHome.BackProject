@@ -14,7 +14,7 @@ namespace EduHome.Core.Entities
         public string Image { get; set; } = null!;
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-        public List<TagBlog> TagBlogs { get; set; }
+        public List<TagCourse> TagCourses { get; set; }
         public List<Feature> Features { get; set; } = null!;
     }
 }

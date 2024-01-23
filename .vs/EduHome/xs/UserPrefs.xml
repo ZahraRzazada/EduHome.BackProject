@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{A91A4460-83CB-4596-8049-BEF686681242}|Default">
-  <MonoDevelop.Ide.ItemProperties.EduHome.App PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="EduHome.Service/Services/Implementations/CourseService.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EduHome.Core/Entities/TagBlog.cs">
     <Files>
       <File FileName="EduHome.Core/Entities/Skill.cs" />
-      <File FileName="EduHome.Core/Entities/Course.cs" />
-      <File FileName="EduHome.Core/DTOS/Course/CoursePostDto.cs" />
-      <File FileName="EduHome.Core/Entities/Blog.cs" />
+      <File FileName="EduHome.Core/Entities/Course.cs" Line="6" Column="32" />
+      <File FileName="EduHome.Core/DTOS/Course/CoursePostDto.cs" Line="18" Column="63" />
+      <File FileName="EduHome.Core/Entities/Blog.cs" Line="16" Column="1" />
       <File FileName="EduHome.Core/Entities/Teacher.cs" />
-      <File FileName="EduHome.Core/Entities/TagBlog.cs" />
+      <File FileName="EduHome.Core/Entities/TagBlog.cs" Line="13" Column="6" />
       <File FileName="EduHome.Core/Entities/Category.cs" />
       <File FileName="EduHome.Core/DTOS/Teacher/TeacherGetDto.cs" />
       <File FileName="EduHome.Core/DTOS/Teacher/TeacherPostDto.cs" />
@@ -18,43 +19,42 @@
       <File FileName="EduHome.Core/Repositories/IDegreeRepository.cs" />
       <File FileName="EduHome.Data/Repositories/CourseRepository.cs" />
       <File FileName="EduHome.Data/ServiceRegisterations/DataAccessServiceRegisterExtention.cs" />
-      <File FileName="EduHome.Service/ServiceRegistrations/ServiceLaierServiceRegisterExtention.cs" Line="21" Column="35" />
-      <File FileName="EduHome.Service/Services/Interfaces/ICourseService.cs" Line="7" Column="19" />
+      <File FileName="EduHome.Service/ServiceRegistrations/ServiceLaierServiceRegisterExtention.cs" />
+      <File FileName="EduHome.Service/Services/Interfaces/ICourseService.cs" />
       <File FileName="EduHome.Service/Services/Implementations/TeacherService.cs" />
       <File FileName="EduHome.Service/Services/Interfaces/ITeacherService.cs" />
-      <File FileName="EduHome.Service/Services/Implementations/CourseService.cs" Line="1" Column="1" />
+      <File FileName="EduHome.Service/Services/Implementations/CourseService.cs" Line="9" Column="1" />
+      <File FileName="EduHome.Service/Services/Interfaces/ITagService.cs" Line="1" Column="1" />
+      <File FileName="EduHome.Service/Services/Implementations/TagService.cs" Line="1" Column="1" />
+      <File FileName="EduHome.Service/Services/Implementations/CategoryService.cs" Line="3" Column="33" />
+      <File FileName="EduHome.App/Views/Course/Index.cshtml" Line="52" Column="43" />
+      <File FileName="EduHome.Core/DTOS/Course/CourseGetDto.cs" Line="8" Column="50" />
+      <File FileName="EduHome.App/Controllers/CourseController.cs" Line="53" Column="39" />
+      <File FileName="EduHome.App/Controllers/BlogController.cs" Line="41" Column="42" />
+      <File FileName="EduHome.App/Controllers/ContactController.cs" Line="1" Column="1" />
+      <File FileName="EduHome.Core/Entities/Feature.cs" Line="1" Column="1" />
+      <File FileName="EduHome.App/Views/Course/Detail.cshtml" Line="128" Column="31" />
+      <File FileName="EduHome.App/Views/Teacher/Detail.cshtml" Line="74" Column="18" />
+      <File FileName="EduHome.App/Views/Blog/Detail.cshtml" Line="102" Column="26" />
+      <File FileName="EduHome.Core/Entities/Tag.cs" Line="10" Column="54" />
+      <File FileName="EduHome.Core/Entities/TagCourse.cs" Line="8" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="EduHome" selected="True">
-            <Node name="EduHome.App" expanded="True">
-              <Node name="Areas" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                  <Node name="Views" expanded="True">
-                    <Node name="Home" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True">
+          <Node name="EduHome" expanded="True">
+            <Node name="EduHome.App">
+              <Node name="Views">
                 <Node name="Blog" expanded="True" />
-                <Node name="Contact" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
                 <Node name="Teacher" expanded="True" />
               </Node>
             </Node>
-            <Node name="EduHome.Core" expanded="True">
-              <Node name="Entities" expanded="True" />
-            </Node>
-            <Node name="EduHome.Service" expanded="True">
-              <Node name="ServiceRegistrations" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="Implementations" expanded="True" />
-                <Node name="Interfaces" expanded="True" />
+            <Node name="EduHome.Core">
+              <Node name="DTOS" expanded="True">
+                <Node name="Course" expanded="True" />
+              </Node>
+              <Node name="Entities">
+                <Node name="TagBlog.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -62,14 +62,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.Service/Services/Implementations/BlogService.cs" relfile="EduHome.Service/Services/Implementations/BlogService.cs" line="109" column="1" />
       <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.Service/Services/Implementations/BlogService.cs" relfile="EduHome.Service/Services/Implementations/BlogService.cs" line="109" column="1" />
-      <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.App/Controllers/BlogController.cs" relfile="EduHome.App/Controllers/BlogController.cs" line="44" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.EduHome.App PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

@@ -455,6 +455,35 @@ namespace EduHome.Data.Migrations
                     b.Property<int>("BlogId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("TagBlog");
+                });
+
+            modelBuilder.Entity("EduHome.Core.Entities.TagCourse", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
@@ -472,13 +501,11 @@ namespace EduHome.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BlogId");
-
                     b.HasIndex("CourseId");
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("TagBlog");
+                    b.ToTable("TagCourse");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.Teacher", b =>
@@ -678,12 +705,6 @@ namespace EduHome.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EduHome.Core.Entities.Course", "Course")
-                        .WithMany("TagBlogs")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("EduHome.Core.Entities.Tag", "Tag")
                         .WithMany("TagBlogs")
                         .HasForeignKey("TagId")
@@ -691,6 +712,23 @@ namespace EduHome.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Blog");
+
+                    b.Navigation("Tag");
+                });
+
+            modelBuilder.Entity("EduHome.Core.Entities.TagCourse", b =>
+                {
+                    b.HasOne("EduHome.Core.Entities.Course", "Course")
+                        .WithMany("TagCourses")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EduHome.Core.Entities.Tag", "Tag")
+                        .WithMany("TagCourses")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Course");
 
@@ -764,7 +802,7 @@ namespace EduHome.Data.Migrations
                 {
                     b.Navigation("Features");
 
-                    b.Navigation("TagBlogs");
+                    b.Navigation("TagCourses");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.Degree", b =>
@@ -790,6 +828,8 @@ namespace EduHome.Data.Migrations
             modelBuilder.Entity("EduHome.Core.Entities.Tag", b =>
                 {
                     b.Navigation("TagBlogs");
+
+                    b.Navigation("TagCourses");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.Teacher", b =>
