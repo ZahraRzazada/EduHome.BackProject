@@ -7,6 +7,7 @@ public record SliderGetDto
 	public string Title { get; set; } = null!;
     public string Description { get; set; } = null!;
     public string Image { get; set; } = null!;
+    public DateTime CreatedAt { get; set; }
 
 }
 

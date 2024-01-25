@@ -30,6 +30,7 @@ namespace EduHome.Service.Services.Implementations
             Blog blog = new Blog
             {
                 AuthorId = dto.AuthorId,
+               
                 Description = dto.Description,
                 Title = dto.Title,
                 TagBlogs = new List<TagBlog>(),
@@ -57,7 +58,7 @@ namespace EduHome.Service.Services.Implementations
                 return commonResponse;
             }
 
-            blog.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "img/blog");
+            blog.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "assets/img/blog");
 
             foreach (var item in dto.TagsIds)
             {

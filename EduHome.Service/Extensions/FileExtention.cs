@@ -10,6 +10,7 @@ namespace EduHome.Service.Extensions
             string RootPath = Path.Combine(rootPath, folder);
             string FileName = Guid.NewGuid().ToString() + file.FileName;
             string FullPath = Path.Combine(RootPath, FileName);
+
             using (FileStream fileStream = new FileStream(FullPath, FileMode.Create))
             {
                 file.CopyTo(fileStream);

@@ -1,7 +1,15 @@
 ﻿<Properties StartupConfiguration="{A91A4460-83CB-4596-8049-BEF686681242}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="EduHome.Data/Migrations/20240123083834_CoursePartOk.Designer.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.Service/Services/Implementations/BlogService.cs" relfile="EduHome.Service/Services/Implementations/BlogService.cs" line="110" column="1" />
+      <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.App/Areas/Admin/Controllers/DegreeController.cs" relfile="EduHome.App/Areas/Admin/Controllers/DegreeController.cs" line="34" column="1" />
+      <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.Service/Services/Implementations/DegreeService.cs" relfile="EduHome.Service/Services/Implementations/DegreeService.cs" line="19" column="1" />
+      <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.App/Areas/Admin/Controllers/DegreeController.cs" relfile="EduHome.App/Areas/Admin/Controllers/DegreeController.cs" line="22" column="1" />
+      <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.App/Areas/Admin/Views/Degree/Index.cshtml" relfile="EduHome.App/Areas/Admin/Views/Degree/Index.cshtml" line="27" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EduHome.Core/Entities/Author.cs">
     <Files>
       <File FileName="EduHome.Core/Entities/Skill.cs" />
       <File FileName="EduHome.Core/Entities/Course.cs" />
@@ -14,19 +22,19 @@
       <File FileName="EduHome.Core/DTOS/Teacher/TeacherPostDto.cs" />
       <File FileName="EduHome.Core/DTOS/Blog/BlogPostDto.cs" />
       <File FileName="EduHome.Core/DTOS/Blog/BlogGetDto.cs" />
-      <File FileName="EduHome.Data/Contexts/EduDbContext.cs" Line="30" Column="53" />
+      <File FileName="EduHome.Data/Contexts/EduDbContext.cs" Line="31" Column="4" />
       <File FileName="EduHome.Core/Repositories/ICourseRepository.cs" />
       <File FileName="EduHome.Core/Repositories/IDegreeRepository.cs" />
       <File FileName="EduHome.Data/Repositories/CourseRepository.cs" />
-      <File FileName="EduHome.Data/ServiceRegisterations/DataAccessServiceRegisterExtention.cs" Line="19" Column="13" />
-      <File FileName="EduHome.Service/ServiceRegistrations/ServiceLaierServiceRegisterExtention.cs" />
+      <File FileName="EduHome.Data/ServiceRegisterations/DataAccessServiceRegisterExtention.cs" Line="24" Column="8" />
+      <File FileName="EduHome.Service/ServiceRegistrations/ServiceLaierServiceRegisterExtention.cs" Line="19" Column="59" />
       <File FileName="EduHome.Service/Services/Interfaces/ICourseService.cs" />
       <File FileName="EduHome.Service/Services/Implementations/TeacherService.cs" />
       <File FileName="EduHome.Service/Services/Interfaces/ITeacherService.cs" />
       <File FileName="EduHome.Service/Services/Implementations/CourseService.cs" />
       <File FileName="EduHome.Service/Services/Interfaces/ITagService.cs" />
       <File FileName="EduHome.Service/Services/Implementations/TagService.cs" />
-      <File FileName="EduHome.Service/Services/Implementations/CategoryService.cs" />
+      <File FileName="EduHome.Service/Services/Implementations/CategoryService.cs" Line="29" Column="108" />
       <File FileName="EduHome.App/Views/Course/Index.cshtml" />
       <File FileName="EduHome.Core/DTOS/Course/CourseGetDto.cs" />
       <File FileName="EduHome.App/Controllers/CourseController.cs" />
@@ -38,34 +46,144 @@
       <File FileName="EduHome.App/Views/Blog/Detail.cshtml" />
       <File FileName="EduHome.Core/Entities/Tag.cs" />
       <File FileName="EduHome.Core/Entities/TagCourse.cs" />
-      <File FileName="EduHome.Data/Migrations/20240123083834_CoursePartOk.Designer.cs" Line="1" Column="1" />
-      <File FileName="EduHome.Data/Migrations/20240123083834_CoursePartOk.cs" Line="1" Column="1" />
+      <File FileName="EduHome.App/appsettings.json" />
+      <File FileName="EduHome.Core/Entities/Hobby.cs" />
+      <File FileName="EduHome.Core/Entities/Degree.cs" />
+      <File FileName="EduHome.Core/Entities/Faculty.cs" />
+      <File FileName="EduHome.Core/Entities/TeacherFaculty.cs" />
+      <File FileName="EduHome.Service/Services/Implementations/DegreeService.cs" />
+      <File FileName="EduHome.Service/Services/Implementations/FacultyService.cs" Line="31" Column="110" />
+      <File FileName="EduHome.Core/Entities/TeacherHobbies.cs" />
+      <File FileName="EduHome.Core/DTOS/Hobby/HobbyGetDto.cs" />
+      <File FileName="EduHome.Core/DTOS/Hobby/HobbyPostDto.cs" />
+      <File FileName="EduHome.Core/DTOS/Faculty/FacultyGetDto.cs" />
+      <File FileName="EduHome.Core/DTOS/Faculty/FacultyPostDto.cs" />
+      <File FileName="EduHome.Service/Services/Interfaces/IHobbyService.cs" Line="1" Column="1" />
+      <File FileName="EduHome.Service/Services/Implementations/HobbyService.cs" Line="31" Column="108" />
+      <File FileName="EduHome.Data/Repositories/HobbyRepository.cs" />
+      <File FileName="EduHome.Core/Repositories/IHobbyRepository.cs" />
+      <File FileName="EduHome.App/Views/Blog/Index.cshtml" />
+      <File FileName="EduHome.App/Views/Teacher/Index.cshtml" />
+      <File FileName="EduHome.App/Views/Home/Index.cshtml" Line="11" Column="130" />
+      <File FileName="EduHome.App/ViewModels/HomeViewModel.cs" />
+      <File FileName="EduHome.App/Controllers/HomeController.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Blog/Index.cshtml" Line="34" Column="78" />
+      <File FileName="EduHome.App/Areas/Admin/Views/_ViewImports.cshtml" />
+      <File FileName="EduHome.App/Views/_ViewStart.cshtml" />
+      <File FileName="EduHome.App/Views/_ViewImports.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/_ViewStart.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Shared/_Layout.cshtml" Line="480" Column="29" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/BlogController.cs" />
+      <File FileName="EduHome.Service/Extensions/FileExtention.cs" />
+      <File FileName="EduHome.Core/DTOS/About/AboutGetDto.cs" />
+      <File FileName="EduHome.Core/DTOS/Testimonial/TestimonialGetDto.cs" Line="12" Column="46" />
+      <File FileName="EduHome.Core/Repositories/IAuthorRepository.cs" />
+      <File FileName="EduHome.Core/Repositories/ITestimonialRepository.cs" />
+      <File FileName="EduHome.App/Views/About/Index.cshtml" />
+      <File FileName="EduHome.App/ViewModels/AboutViewModel.cs" />
+      <File FileName="EduHome.Data/Migrations/20240124131644_About.cs" />
+      <File FileName="EduHome.App/Controllers/AboutController.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Blog/Create.cshtml" Line="51" Column="56" />
+      <File FileName="EduHome.App/Controllers/TeacherController.cs" />
+      <File FileName="EduHome.Service/Services/Implementations/BlogService.cs" Line="33" Column="16" />
+      <File FileName="EduHome.Core/Entities/Author.cs" Line="1" Column="1" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Author/Index.cshtml" />
+      <File FileName="EduHome.Core/DTOS/Author/AuthorGetDto.cs" />
+      <File FileName="EduHome.Core/DTOS/Author/AuthorPostDto.cs" />
+      <File FileName="EduHome.Service/Services/Implementations/AuthorService.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/AuthorController.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Author/Update.cshtml" />
+      <File FileName="EduHome.Service/Services/Implementations/PositionService.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/PositionController.cs" />
+      <File FileName="EduHome.Service/Services/Interfaces/IPositionService.cs" />
+      <File FileName="EduHome.Service/Services/Interfaces/IBlogService.cs" />
+      <File FileName="EduHome.Service/Services/Interfaces/IAuthorService.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Position/Create.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Position/Index.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Position/Update.cshtml" />
+      <File FileName="EduHome.Service/Services/Implementations/SliderService.cs" Line="1" Column="1" />
+      <File FileName="EduHome.Core/DTOS/Position/PositionGetDto.cs" />
+      <File FileName="EduHome.Core/DTOS/Position/PositionPostDto.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/DegreeController.cs" Line="11" Column="4" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Degree/Create.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Degree/Index.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Degree/Update.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/TagController.cs" Line="62" Column="52" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Tag/Index.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Tag/Create.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Tag/Update.cshtml" />
+      <File FileName="EduHome.Service/Services/Interfaces/IFacultyService.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="EduHome.Core/DTOS/Degree/DegreeGetDto.cs" />
+      <File FileName="EduHome.Core/DTOS/Degree/DegreePostDto.cs" />
+      <File FileName="EduHome.Core/Repositories/ITagRepository.cs" />
+      <File FileName="EduHome.Data/Repositories/DegreeRepository.cs" />
+      <File FileName="EduHome.Data/Repositories/TagRepository.cs" />
+      <File FileName="EduHome.Core/DTOS/Tag/TagPostDto.cs" />
+      <File FileName="EduHome.Core/DTOS/Tag/TagGetDto.cs" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Hobby/Index.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Hobby/Update.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Hobby/Create.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Faculty/Create.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Faculty/Index.cshtml" Line="28" Column="34" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Faculty/Update.cshtml" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/HobbyController.cs" Line="16" Column="46" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/CategoryController.cs" Line="20" Column="26" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Category/Create.cshtml" Line="1" Column="23" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Category/Index.cshtml" Line="32" Column="60" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Category/Update.cshtml" Line="1" Column="22" />
+      <File FileName="EduHome.Service/Services/Interfaces/ICategoryService.cs" Line="1" Column="1" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/SliderController.cs" Line="40" Column="17" />
+      <File FileName="EduHome.Service/Services/Interfaces/ISliderSerice.cs" Line="1" Column="1" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Slider/Create.cshtml" Line="28" Column="24" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Slider/Index.cshtml" Line="34" Column="83" />
+      <File FileName="EduHome.Core/DTOS/Slider/SliderGetDto.cs" Line="10" Column="42" />
+      <File FileName="EduHome.App/Areas/Admin/Views/Blog/Update.cshtml" Line="85" Column="38" />
+      <File FileName="EduHome.App/Areas/Admin/Controllers/FacultyController.cs" Line="68" Column="1" />
+      <File FileName="EduHome.Core/Entities/Position.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EduHome" expanded="True">
-            <Node name="EduHome.Core" expanded="True">
-              <Node name="Entities" expanded="True" />
-            </Node>
-            <Node name="EduHome.Data" expanded="True">
-              <Node name="Contexts" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20240123083834_CoursePartOk.Designer.cs" selected="True" />
+            <Node name="EduHome.App">
+              <Node name="Areas" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="Blog" expanded="True" />
+                    <Node name="Faculty" expanded="True" />
+                    <Node name="Shared" expanded="True" />
+                    <Node name="Slider" expanded="True" />
+                  </Node>
+                </Node>
               </Node>
-              <Node name="ServiceRegisterations" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="assets" expanded="True">
+                  <Node name="img" expanded="True">
+                    <Node name="slider" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="EduHome.Core">
+              <Node name="DTOS" expanded="True" />
+              <Node name="Entities" expanded="True">
+                <Node name="Author.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="EduHome.Data">
+              <Node name="Contexts" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.Service/Services/Implementations/BlogService.cs" relfile="EduHome.Service/Services/Implementations/BlogService.cs" line="109" column="1" />
-      <Breakpoint file="/Users/zahrarzazada/Projects/EduHome/EduHome.Service/Services/Implementations/BlogService.cs" relfile="EduHome.Service/Services/Implementations/BlogService.cs" line="109" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.EduHome.App PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

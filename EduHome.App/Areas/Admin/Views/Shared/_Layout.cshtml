@@ -211,10 +211,10 @@
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                             <div class="dropdown-header text-center">
                                 <img class="img-md rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image">
-                                @if (User.Identity.IsAuthenticated)
+                                @*@if (User.Identity.IsAuthenticated)
                                 {
                                     <p class="mb-1 mt-3 font-weight-semibold">@User.Identity.Name</p>
-                                }
+                                }*@
                                 <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
                             </div>
                             <a class="dropdown-item">
@@ -444,36 +444,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Brand" asp-action="index">
-                            <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Brand</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Category" asp-action="index">
-                            <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Category</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Color" asp-action="index">
-                            <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Color</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Position" asp-action="index">
-                            <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Position</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Tag" asp-action="index">
-                            <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Tag</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" asp-controller="Author" asp-action="index">
                             <i class="mdi mdi-grid-large menu-icon"></i>
                             <span class="menu-title">Author</span>
@@ -486,23 +456,45 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Product" asp-action="index">
+                        <a class="nav-link" asp-controller="Position" asp-action="index">
                             <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Product</span>
+                            <span class="menu-title">Position</span>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Contact" asp-action="index">
+                        <a class="nav-link" asp-controller="Degree" asp-action="index">
                             <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Contact</span>
+                            <span class="menu-title">Degree</span>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Order" asp-action="index">
+                        <a class="nav-link" asp-controller="Tag" asp-action="index">
                             <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Order</span>
+                            <span class="menu-title">Tag</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Faculty" asp-action="Index">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
+                            <span class="menu-title">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Hobby" asp-action="index">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
+                            <span class="menu-title">Hobby</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Category" asp-action="index">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
+                            <span class="menu-title">Category</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Slider" asp-action="index">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
+                            <span class="menu-title">Slider</span>
                         </a>
                     </li>
                 </ul>

@@ -28,7 +28,7 @@ namespace EduHome.Service.Services.Implementations
         public async Task<IEnumerable<HobbyGetDto>> GetAllAsync()
         {
             IEnumerable<HobbyGetDto> hobbies = await _hobbyRepository.GetQuery(x => !x.IsDeleted)
-               .AsNoTrackingWithIdentityResolution().Select(x => new HobbyGetDto { Name = x.Name })
+               .AsNoTrackingWithIdentityResolution().Select(x => new HobbyGetDto { Name = x.Name, Id = x.Id })
                .ToListAsync();
             return hobbies;
         }

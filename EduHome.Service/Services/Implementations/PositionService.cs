@@ -28,7 +28,7 @@ namespace EduHome.Service.Services.Implementations
         public async Task<IEnumerable<PositionGetDto>> GetAllAsync()
         {
             IEnumerable<PositionGetDto> positionGetDtos = await _positionRepository.GetQuery(x => !x.IsDeleted)
-               .AsNoTrackingWithIdentityResolution().Select(x => new PositionGetDto { Name = x.Name })
+               .AsNoTrackingWithIdentityResolution().Select(x => new PositionGetDto { Name = x.Name,Id=x.Id })
                .ToListAsync();
             return positionGetDtos;
         }

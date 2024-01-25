@@ -18,6 +18,7 @@ namespace EduHome.Service.Services.Implementations
         public async Task CreateAsync(DegreePostDto dto)
         {
             Degree degree = new Degree();
+           
             degree.Name = dto.Name;
 
             await _degreeRepository.AddAsync(degree);
@@ -26,7 +27,7 @@ namespace EduHome.Service.Services.Implementations
         public async Task<IEnumerable<DegreeGetDto>> GetAllAsync()
         {
             IEnumerable<DegreeGetDto> degree = await _degreeRepository.GetQuery(x => !x.IsDeleted)
-               .AsNoTrackingWithIdentityResolution().Select(x => new DegreeGetDto { Name = x.Name })
+               .AsNoTrackingWithIdentityResolution().Select(x => new DegreeGetDto { Name = x.Name ,Id=x.Id})
                .ToListAsync();
             return degree;
         }

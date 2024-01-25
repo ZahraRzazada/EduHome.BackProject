@@ -17,6 +17,15 @@
     <None Remove="Areas\Admin\Views\" />
     <None Remove="Areas\Admin\Views\Home\" />
     <None Remove="Areas\Admin\Views\Shared\" />
+    <None Remove="Areas\Admin\Views\Blog\" />
+    <None Remove="Areas\Admin\Views\Author\" />
+    <None Remove="Areas\Admin\Views\Position\" />
+    <None Remove="Areas\Admin\Views\Degree\" />
+    <None Remove="Areas\Admin\Views\Tag\" />
+    <None Remove="Areas\Admin\Views\Hobby\" />
+    <None Remove="Areas\Admin\Views\Faculty\" />
+    <None Remove="Areas\Admin\Views\Category\" />
+    <None Remove="Areas\Admin\Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -31,6 +40,15 @@
     <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="wwwroot\admin\" />
+    <Folder Include="Areas\Admin\Views\Blog\" />
+    <Folder Include="Areas\Admin\Views\Author\" />
+    <Folder Include="Areas\Admin\Views\Position\" />
+    <Folder Include="Areas\Admin\Views\Degree\" />
+    <Folder Include="Areas\Admin\Views\Tag\" />
+    <Folder Include="Areas\Admin\Views\Hobby\" />
+    <Folder Include="Areas\Admin\Views\Faculty\" />
+    <Folder Include="Areas\Admin\Views\Category\" />
+    <Folder Include="Areas\Admin\Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

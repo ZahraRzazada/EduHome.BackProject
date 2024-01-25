@@ -28,7 +28,7 @@ namespace EduHome.Service.Services.Implementations
         public async Task<IEnumerable<FacultyGetDto>> GetAllAsync()
         {
             IEnumerable<FacultyGetDto> faculty = await _facultyRepository.GetQuery(x => !x.IsDeleted)
-               .AsNoTrackingWithIdentityResolution().Select(x => new FacultyGetDto { Name = x.Name })
+               .AsNoTrackingWithIdentityResolution().Select(x => new FacultyGetDto { Name = x.Name, Id = x.Id })
                .ToListAsync();
             return faculty;
         }
