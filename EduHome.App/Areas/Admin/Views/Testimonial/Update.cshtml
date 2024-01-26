@@ -1,0 +1,46 @@
+﻿@model TestimonialGetDto
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description">
+                        Basic form layout
+                    </p>
+                    <form enctype="multipart/form-data" method="post" class="forms-sample">
+                        <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+                        <div class="form-group">
+                            <label asp-for="Text"></label>
+                            <input asp-for="Text" class="form-control" placeholder="Text">
+                            <span class="text text-danger" asp-validation-for="Text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="FullName"></label>
+                            <input asp-for="FullName" class="form-control" placeholder="FullName">
+                            <span class="text text-danger" asp-validation-for="FullName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Position"></label>
+                            <input asp-for="Position" class="form-control" placeholder="Position">
+                            <span class="text text-danger" asp-validation-for="Position"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" accept="image/*" name="ImageFile" class="form-control">
+                            <br />
+                            <img src="~/img/assets/testimonial/@Model.Image" />
+                        </div>
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
+
+
+                    
+               
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -26,6 +26,8 @@
     <None Remove="Areas\Admin\Views\Faculty\" />
     <None Remove="Areas\Admin\Views\Category\" />
     <None Remove="Areas\Admin\Views\Slider\" />
+    <None Remove="Areas\Admin\Views\Testimonial\" />
+    <None Remove="Areas\Admin\Views\Course\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -48,7 +50,10 @@
     <Folder Include="Areas\Admin\Views\Hobby\" />
     <Folder Include="Areas\Admin\Views\Faculty\" />
     <Folder Include="Areas\Admin\Views\Category\" />
+    <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Admin\Views\Slider\" />
+    <Folder Include="Areas\Admin\Views\Testimonial\" />
+    <Folder Include="Areas\Admin\Views\Course\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

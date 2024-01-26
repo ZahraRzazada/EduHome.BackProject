@@ -147,7 +147,7 @@ namespace EduHome.Service.Services.Implementations
         {
             CommonResponse commonResponse = new CommonResponse();
             commonResponse.StatusCode = 200;
-            Blog? blog = await _blogRepository.GetAsync(x => !x.IsDeleted && x.Id == id, "TagBlogs.Tag", "Author.Position");
+            Blog? blog = await _blogRepository.GetAsync(x => !x.IsDeleted && x.Id == id, "TagBlogs.Tag", "Author");
 
             if (blog == null)
             {
@@ -174,7 +174,7 @@ namespace EduHome.Service.Services.Implementations
                     return commonResponse;
                 }
 
-                blog.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "img/blog");
+                blog.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "assets/img/blog");
             }
             blog.TagBlogs.Clear();
 

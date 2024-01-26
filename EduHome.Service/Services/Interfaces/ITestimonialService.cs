@@ -1,5 +1,6 @@
 ﻿using System;
 using EduHome.Core.DTOS;
+using EduHome.Service.Responses;
 
 namespace EduHome.Service.Services.Interfaces
 {
@@ -8,11 +9,11 @@ namespace EduHome.Service.Services.Interfaces
 
         public Task<IEnumerable<TestimonialGetDto>> GetAllAsync();
 
-        public Task CreateAsync(TestimonialGetDto dto);
+        public Task<CommonResponse> CreateAsync(TestimonialPostDto dto);
 
         public Task RemoveAsync(int id);
 
-        public Task UpdateAsync(int id, TestimonialGetDto dto);
+        public Task<CommonResponse> UpdateAsync(int id, TestimonialPostDto dto);
         public Task<TestimonialGetDto> GetAsync(int id);
     }
 }

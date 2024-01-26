@@ -1,5 +1,6 @@
 ﻿using System;
 using EduHome.Core.DTOS;
+using EduHome.Service.Responses;
 
 namespace EduHome.Service.Services.Interfaces
 {
@@ -8,11 +9,11 @@ namespace EduHome.Service.Services.Interfaces
 
         public Task<IEnumerable<SliderGetDto>> GetAllAsync();
 
-        public Task CreateAsync(SliderGetDto dto);
+        public Task<CommonResponse> CreateAsync(SliderPostDto dto);
 
         public Task RemoveAsync(int id);
 
-        public Task UpdateAsync(int id, SliderGetDto dto);
+        public Task<CommonResponse> UpdateAsync(int id, SliderPostDto dto);
         public Task<SliderGetDto> GetAsync(int id);
     }
 }

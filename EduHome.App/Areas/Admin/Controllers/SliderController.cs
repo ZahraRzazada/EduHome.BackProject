@@ -33,7 +33,7 @@ namespace EduHome.App.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(SliderGetDto dto)
+        public async Task<IActionResult> Create(SliderPostDto dto)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +49,7 @@ namespace EduHome.App.Areas.Admin.Controllers
             return View(await _sliderService.GetAsync(id));
         }
         [HttpPost]
-        public async Task<IActionResult> Update(int id, SliderGetDto dto)
+        public async Task<IActionResult> Update(int id, SliderPostDto dto)
         {
             if (!ModelState.IsValid)
             {

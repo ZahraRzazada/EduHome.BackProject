@@ -1,0 +1,125 @@
+﻿@model CoursePostDto
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description">
+                        Basic form layout
+                    </p>
+                    <form enctype="multipart/form-data" method="post" class="forms-sample">
+                        <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control" placeholder="Name">
+                            <span class="text text-danger" asp-validation-for="Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Title"></label>
+                            <input asp-for="Title" class="form-control" placeholder="Name">
+                            <span class="text text-danger" asp-validation-for="Title"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description"></label>
+                            <input asp-for="Description" class="form-control" placeholder="Info">
+                            <span class="text text-danger" asp-validation-for="Description"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="About"></label>
+                            <input asp-for="About" class="form-control" placeholder="About">
+                            <span class="text text-danger" asp-validation-for="About"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Apply"></label>
+                            <input asp-for="Apply" class="form-control" placeholder="Apply">
+                            <span class="text text-danger" asp-validation-for="Apply"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Certification"></label>
+                            <input asp-for="Certification" class="form-control" placeholder="Certification">
+                            <span class="text text-danger" asp-validation-for="Certification"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input accept="image/*" asp-for="ImageFile" class="form-control" placeholder="Image">
+                            <span class="text text-danger" asp-validation-for="ImageFile"></span>
+                        </div>
+
+                        <div class="form-row col-12" id="feature">
+                            <div class="form-group col-md-6" data-index="0">
+                                <label>Feature Key</label>
+                                <input class="form-control" asp-for="FeatureKeys">
+                                <span asp-validation-for="FeatureKeys"></span>
+                                <label> Feature Value</label>
+                                <input class="form-control" asp-for="FeatureValues">
+                                <span asp-validation-for="FeatureValues"></span>
+                                <span><i style="cursor:pointer" class="fas fa-minus delete-feature"> </i></span>
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group">
+                                <button type="button" data-nextIndex="2" class="add-feature btn btn-primary">+</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select asp-for="TagsIds" class="form-select" aria-label="Default select example">
+                                <option selected>Tags</option>
+                                @foreach (var item in ViewBag.Tags)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                            <span class="text text-danger" asp-validation-for="TagsIds"></span>
+                        </div>
+                        <div class="form-group">
+
+
+                            <select asp-for="CategoryId" class="form-select" aria-label="Default select example">
+                                <option selected>Categories</option>
+                                @foreach (var item in ViewBag.Categorys)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                            <span class="text text-danger" asp-validation-for="CategoryId"></span>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>$(document).on("click", ".add-feature", function (e) {
+        e.preventDefault();
+        var nextIndex = $(this).attr("data-nextIndex");
+    var inputGroup = `div class="form-row col-12" id="feature">
+                            <div class="form-group col-md-6" data-index="0">
+                                <label>Feature Key</label>
+                                <input class="form-control" asp-for="FeatureKeys">
+                                <span asp-validation-for="FeatureKeys"></span>
+                                <label> Feature Value</label>
+                                <input class="form-control" asp-for="FeatureValues">
+                                <span asp-validation-for="FeatureValues"></span>
+                                <span><i style="cursor:pointer" class="fas fa-minus delete-feature"> </i></span>
+                            </div>
+                        </div>`
+        $("#spec").append($(inputGroup))
+        nextIndex = +nextIndex + 1;
+        console.log(nextIndex)
+        $(this).attr("data-nextIndex", nextIndex)
+    })
+    $(document).on("click", ".delete-feature", function (e) {
+        e.preventDefault();
+        $(this).parents(".form-group").empty();
+    })
+})</script>
+
+

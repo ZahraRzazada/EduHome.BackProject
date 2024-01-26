@@ -1,4 +1,4 @@
-﻿@model SliderGetDto
+﻿@model SliderPostDto
 
 <div class="content-wrapper">
     <div class="row">
@@ -21,11 +21,12 @@
                             <input asp-for="Description" class="form-control" placeholder="Info">
                             <span class="text text-danger" asp-validation-for="Description"></span>
                         </div>
+
                         <div class="form-group">
-                            <input accept="image/*" asp-for="Image" class="form-control" placeholder="Image">
-                            <span class="text text-danger" asp-validation-for="Image"></span>
+                            <input accept="image/*" asp-for="ImageFile" class="form-control" placeholder="Image">
+                            <span class="text text-danger" asp-validation-for="ImageFile"></span>
                         </div>
-                       
+
                         <button type="submit" class="btn btn-primary me-2">Submit</button>
                         <button class="btn btn-light">Cancel</button>
                     </form>

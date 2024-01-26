@@ -30,6 +30,7 @@ namespace EduHome.Service.Services.Implementations
 
             Course course = new Course
             {
+              
                 Name = dto.Name,
                 Certification=dto.Certification,
                 Apply=dto.Apply,
@@ -62,7 +63,7 @@ namespace EduHome.Service.Services.Implementations
             return commonResponse;
             }
 
-            course.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "img/course");
+            course.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "assets/img/course");
 
             foreach (var item in dto.TagsIds)
             {
@@ -201,7 +202,7 @@ namespace EduHome.Service.Services.Implementations
                     return commonResponse;
                 }
 
-                course.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "img/course");
+                course.Image = dto.ImageFile.SaveFile(_env.WebRootPath, "assets/img/course");
             }
             course.TagCourses.Clear();
 

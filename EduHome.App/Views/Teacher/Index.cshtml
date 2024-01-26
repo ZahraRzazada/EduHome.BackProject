@@ -32,10 +32,11 @@
                         <div class="single-teacher-content text-center">
                             <h2><a href="teacher-details.html">@item.FullName</a></h2>
                             <h4>@item.Position.Name</h4>
-                            
-                            @*@for (int i = 0; Model.T.Count() > i; i++)
+                           
+
+                            @*@for (int i = 0; Model.Count() > i; i++)
                             {
-                                <a href="@Model.AuthorGetDto.Urls[i]">@Html.Raw(Model.AuthorGetDto.Icons[i])</a>
+                                <a href="@item.SocialNetworks.Select(m => m.Url[i])">@Html.Raw(@item.SocialNetworks.Select(m=>m.Icon[i])</a>
                             }*@
 
                         </div>
