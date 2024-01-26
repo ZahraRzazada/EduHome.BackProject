@@ -18,14 +18,16 @@ public class HomeController : Controller
     readonly ICourseService _courseService;
     readonly IBlogService _blogService;
     readonly IEmailService _emailService;
+    readonly INoticeService _noticeService;
 
-    public HomeController(ISliderService sliderService, ITestimonialService testimonialService, ICourseService courseService, IBlogService blogService, IEmailService emailService)
+    public HomeController(ISliderService sliderService, ITestimonialService testimonialService, ICourseService courseService, IBlogService blogService, IEmailService emailService, INoticeService noticeService)
     {
         _sliderService = sliderService;
         _testimonialService = testimonialService;
         _courseService = courseService;
         _blogService = blogService;
         _emailService = emailService;
+        _noticeService = noticeService;
     }
 
     public async Task<IActionResult> Index()
@@ -35,6 +37,7 @@ public class HomeController : Controller
         homeViewModel.Testimoials = await _testimonialService.GetAllAsync();
         homeViewModel.Courses = await _courseService.GetAllAsync();
         homeViewModel.Blogs = await _blogService.GetAllAsync();
+        homeViewModel.Notices = await _noticeService.GetAllAsync();
         return View(homeViewModel);
     }
 

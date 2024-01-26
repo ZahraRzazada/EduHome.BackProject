@@ -30,6 +30,7 @@
     <None Remove="Areas\Admin\Views\Course\" />
     <None Remove="Areas\Admin\Views\Identity\" />
     <None Remove="Views\Identity\" />
+    <None Remove="Areas\Admin\Views\Teacher\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -59,6 +60,7 @@
     <Folder Include="Areas\Admin\Views\Identity\" />
     <Folder Include="Views\Identity\" />
     <Folder Include="wwwroot\Templates\" />
+    <Folder Include="Areas\Admin\Views\Teacher\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

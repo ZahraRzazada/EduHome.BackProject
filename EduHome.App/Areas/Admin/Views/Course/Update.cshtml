@@ -71,6 +71,23 @@
                         </div>
 
 
+                        <div class="form-row col-12" id="feature">
+                            <div class="form-group col-md-6" data-index="0">
+                                <label>Feature Key</label>
+                                <input class="form-control" asp-for="FeatureKeys">
+                                <span asp-validation-for="FeatureKeys"></span>
+                                <label> Feature Value</label>
+                                <input class="form-control" asp-for="FeatureValues">
+                                <span asp-validation-for="FeatureValues"></span>
+                                <span><i style="cursor:pointer" class="fas fa-minus delete-feature"> </i></span>
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group">
+                                <button type="button" data-nextIndex="2" class="badd-feature btn btn-primary">+</button>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <select multiple name="TagsIds" class="form-select" aria-label="Default select example">
 
@@ -99,3 +116,27 @@
     </div>
 </div>
 
+<script>$(document).on("click", ".add-feature", function (e) {
+        e.preventDefault();
+        var nextIndex = $(this).attr("data-nextIndex");
+    var inputGroup = `
+                            <div class="form-group col-md-6" data-index="0">
+                                <label>Feature Key</label>
+                                <input class="form-control" asp-for="FeatureKeys">
+                                <span asp-validation-for="FeatureKeys"></span>
+                                <label> Feature Value</label>
+                                <input class="form-control" asp-for="FeatureValues">
+                                <span asp-validation-for="FeatureValues"></span>
+                                <span><i style="cursor:pointer" class="fas fa-minus delete-feature"> </i></span>
+                            </div>
+                        `
+    $("#feature").append($(inputGroup))
+        nextIndex = +nextIndex + 1;
+        console.log(nextIndex)
+        $(this).attr("data-nextIndex", nextIndex)
+    })
+    $(document).on("click", ".delete-feature", function (e) {
+        e.preventDefault();
+        $(this).parents(".form-group").empty();
+    })
+})</script>

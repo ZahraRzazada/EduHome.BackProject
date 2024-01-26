@@ -10,6 +10,7 @@ namespace EduHome.App.ViewModels
         public IEnumerable<SliderGetDto> Sliders { get; set; }
         public IEnumerable<CourseGetDto> Courses { get; set; }
         public IEnumerable<BlogGetDto> Blogs { get; set; }
+        public IEnumerable<NoticeGetDto> Notices { get; set; }
 
     }
 }

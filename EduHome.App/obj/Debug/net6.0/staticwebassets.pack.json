@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/.DS_Store"
     },
     {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/Templates/Verify.html",
+      "PackagePath": "staticwebassets/Templates/Verify.html"
+    },
+    {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/admin/assets/css/maps/vertical-layout-light/style.css.map",
       "PackagePath": "staticwebassets/admin/assets/css/maps/vertical-layout-light/style.css.map"
     },
@@ -6573,6 +6577,10 @@
       "PackagePath": "staticwebassets/assets/img/blog/1330ffe9-8830-47e6-ab0f-7f3033059ae3Screenshot 2024-01-25 at 1.05.19\u202FPM.png"
     },
     {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/blog/1ad1b768-0297-411e-9d15-5a0e74aaa0005e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG",
+      "PackagePath": "staticwebassets/assets/img/blog/1ad1b768-0297-411e-9d15-5a0e74aaa0005e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG"
+    },
+    {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/blog/1bc845aa-19ee-4fd8-83da-f2f5d7f06254Screenshot 2024-01-25 at 1.05.19\u202FPM.png",
       "PackagePath": "staticwebassets/assets/img/blog/1bc845aa-19ee-4fd8-83da-f2f5d7f06254Screenshot 2024-01-25 at 1.05.19\u202FPM.png"
     },
@@ -6595,6 +6603,10 @@
     {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/blog/73adecd5-84cc-4474-b105-ef5894c6cbcaScreenshot 2024-01-25 at 1.05.19\u202FPM.png",
       "PackagePath": "staticwebassets/assets/img/blog/73adecd5-84cc-4474-b105-ef5894c6cbcaScreenshot 2024-01-25 at 1.05.19\u202FPM.png"
+    },
+    {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/blog/833eb0c8-7648-46f3-8922-a8ad7848ab1b5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG",
+      "PackagePath": "staticwebassets/assets/img/blog/833eb0c8-7648-46f3-8922-a8ad7848ab1b5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG"
     },
     {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/blog/blog-detail.jpg",
@@ -6663,6 +6675,14 @@
     {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/contact/contact3.png",
       "PackagePath": "staticwebassets/assets/img/contact/contact3.png"
+    },
+    {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/course/4af6ed83-97ab-429e-9a4a-91cebfd15f5f5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG",
+      "PackagePath": "staticwebassets/assets/img/course/4af6ed83-97ab-429e-9a4a-91cebfd15f5f5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG"
+    },
+    {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/course/84af2f62-107d-4ce2-b61d-5ae195d43b635e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG",
+      "PackagePath": "staticwebassets/assets/img/course/84af2f62-107d-4ce2-b61d-5ae195d43b635e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG"
     },
     {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/course/course-bg.jpg",
@@ -6829,6 +6849,10 @@
       "PackagePath": "staticwebassets/assets/img/slider/11edacaf-0281-41df-a5a3-a252b2ac88b0Screenshot 2024-01-25 at 1.05.19\u202FPM.png"
     },
     {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/slider/397e4668-e6a5-4465-887f-bb91a059913e5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG",
+      "PackagePath": "staticwebassets/assets/img/slider/397e4668-e6a5-4465-887f-bb91a059913e5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG"
+    },
+    {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/slider/6b566786-b320-4afb-8b3d-1155cfa5c3bdScreenshot 2024-01-25 at 1.05.19\u202FPM.png",
       "PackagePath": "staticwebassets/assets/img/slider/6b566786-b320-4afb-8b3d-1155cfa5c3bdScreenshot 2024-01-25 at 1.05.19\u202FPM.png"
     },
@@ -6851,6 +6875,10 @@
     {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/slider/cf9359d7-e3df-4648-b73a-28d82011e2c2Screenshot 2024-01-25 at 1.05.19\u202FPM.png",
       "PackagePath": "staticwebassets/assets/img/slider/cf9359d7-e3df-4648-b73a-28d82011e2c2Screenshot 2024-01-25 at 1.05.19\u202FPM.png"
+    },
+    {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/slider/ef105e9b-c423-415e-ad6a-297a75dd5d282191861b-aee3-44ae-938b-c83588380423.JPG",
+      "PackagePath": "staticwebassets/assets/img/slider/ef105e9b-c423-415e-ad6a-297a75dd5d282191861b-aee3-44ae-938b-c83588380423.JPG"
     },
     {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/slider/home.png",
@@ -6923,6 +6951,10 @@
     {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/testimonial/0c6af895-1264-4b57-865e-da8d78df10feScreenshot 2024-01-25 at 1.05.19\u202FPM.png",
       "PackagePath": "staticwebassets/assets/img/testimonial/0c6af895-1264-4b57-865e-da8d78df10feScreenshot 2024-01-25 at 1.05.19\u202FPM.png"
+    },
+    {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/testimonial/104243a8-267c-4f11-8566-66147e94ebfe5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG",
+      "PackagePath": "staticwebassets/assets/img/testimonial/104243a8-267c-4f11-8566-66147e94ebfe5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG"
     },
     {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/assets/img/testimonial/2f0ee87c-ce83-43af-9d22-f945f4c99e2a5e2e4459-ccdf-4bb5-bba9-e06ed73958ba.JPG",

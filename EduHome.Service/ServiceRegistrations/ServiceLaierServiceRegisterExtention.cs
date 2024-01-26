@@ -22,9 +22,10 @@ namespace EduHome.Service.ServiceRegistrations
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<ITagService, TagService>();
             services.AddScoped<ICourseService, CourseService>();
+            services.AddScoped<INoticeService, NoticeService>();
             services.AddHttpContextAccessor();
             services.AddScoped<IEmailService, EmailService>();
-
+          
         }
 	}
 }

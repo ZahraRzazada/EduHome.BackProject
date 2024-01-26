@@ -61,7 +61,7 @@
                         </div>
                         <div class="form-row justify-content-center">
                             <div class="form-group">
-                                <button type="button" data-nextIndex="2" class="add-feature btn btn-primary">+</button>
+                                <button type="button" data-nextIndex="2" class="badd-feature btn btn-primary">+</button>
                             </div>
                         </div>
                         <div class="form-group">
@@ -97,10 +97,11 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <script>$(document).on("click", ".add-feature", function (e) {
         e.preventDefault();
         var nextIndex = $(this).attr("data-nextIndex");
-    var inputGroup = `div class="form-row col-12" id="feature">
+    var inputGroup = `
                             <div class="form-group col-md-6" data-index="0">
                                 <label>Feature Key</label>
                                 <input class="form-control" asp-for="FeatureKeys">
@@ -110,8 +111,8 @@
                                 <span asp-validation-for="FeatureValues"></span>
                                 <span><i style="cursor:pointer" class="fas fa-minus delete-feature"> </i></span>
                             </div>
-                        </div>`
-        $("#spec").append($(inputGroup))
+                        `
+    $("#feature").append($(inputGroup))
         nextIndex = +nextIndex + 1;
         console.log(nextIndex)
         $(this).attr("data-nextIndex", nextIndex)
@@ -120,6 +121,7 @@
         e.preventDefault();
         $(this).parents(".form-group").empty();
     })
-})</script>
+})
+</script>
 
 

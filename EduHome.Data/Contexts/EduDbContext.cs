@@ -29,10 +29,11 @@ namespace EduHome.Data.Contexts
         public DbSet<Course> Courses { get; set; }
         public DbSet<TagCourse> TagCourses { get; set; }
         public DbSet<TagBlog> TagBlogs { get; set; }
+        public DbSet<Notice> Notices { get; set; }
 
 
 
-   
+
     }
 
 }

@@ -32,12 +32,21 @@
                         <div class="single-teacher-content text-center">
                             <h2><a href="teacher-details.html">@item.FullName</a></h2>
                             <h4>@item.Position.Name</h4>
-                           
+
 
                             @*@for (int i = 0; Model.Count() > i; i++)
-                            {
-                                <a href="@item.SocialNetworks.Select(m => m.Url[i])">@Html.Raw(@item.SocialNetworks.Select(m=>m.Icon[i])</a>
-                            }*@
+        {
+            <a href="@item.Urls[i]">@Html.Raw(@item.Icons[i])</a>
+
+        }*@
+                            <ul>
+                                <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="https://www.pinterest.com/devitemsllc/"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-vimeo"></i></a></li>
+                                <li><a href="https://twitter.com/devitemsllc"><i class="zmdi zmdi-twitter"></i></a></li>
+                            </ul>
+
+
 
                         </div>
                     </div>

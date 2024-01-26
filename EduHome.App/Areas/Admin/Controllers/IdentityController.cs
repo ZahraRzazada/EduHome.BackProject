@@ -54,9 +54,11 @@ namespace EduHome.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", "Username or email or password incorrect");
                 return View();
             }
+          
 
 
             Microsoft.AspNetCore.Identity.SignInResult res = await _signInManager.PasswordSignInAsync(appUser, loginDto.Password, true, false);
+
             if (!res.Succeeded)
             {
                 if (res.IsLockedOut)

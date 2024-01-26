@@ -30,12 +30,12 @@
                             <form class="row login_form" method="post">
                                 <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
                                 <div class="col-md-12 form-group">
-                                    <input asp-for="FullName" class="form-control" placeholder="FullName" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FullName'">
-                                    <span class="alert alert-text" asp-validation-for="FullName"></span>
+                                    <input asp-for="UserName" class="form-control" placeholder="FullName" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+                                    <span class="alert alert-text" asp-validation-for="UserName"></span>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <input asp-for="UserName" class="form-control" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
-                                    <span class="alert alert-text" asp-validation-for="UserName"></span>
+                                    <input asp-for="FullName" class="form-control" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Fullname'">
+                                    <span class="alert alert-text" asp-validation-for="FullName"></span>
                                 </div>
                               
                                 <div class="col-md-12 form-group">

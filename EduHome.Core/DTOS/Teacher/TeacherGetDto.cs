@@ -15,6 +15,8 @@ namespace EduHome.Core.DTOS
         public string Image { get; set; } = null!;
         public List<Skill> Skills { get; set; } = null!;
         public List<SocialNetwork> SocialNetworks { get; set; }
+        public List<string> Icons { get; set; } = null!;
+        public List<string> Urls { get; set; } = null!;
         public int PositionId { get; set; }
         public int DegreeId { get; set; }
         public PositionGetDto Position { get; set; }
@@ -23,6 +25,7 @@ namespace EduHome.Core.DTOS
         public IEnumerable<FacultyGetDto> Faculties { get; set; } = null!;
         public List<TeacherHobbies> TeacherHobbies { get; set; }
         public List<TeacherFaculty> TeacherFaculties { get; set; }
+        public DateTime CreatedAt { get; set; }
 
 
     }

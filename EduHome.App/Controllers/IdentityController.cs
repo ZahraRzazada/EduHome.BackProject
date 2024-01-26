@@ -108,6 +108,7 @@ namespace EduHome.App.Controllers
                 return View();
             }
             Microsoft.AspNetCore.Identity.SignInResult res = await _signInManager.PasswordSignInAsync(appUser, dto.Password, dto.RememberMe, true);
+            var roles = await _userManager.GetRolesAsync(appUser);
             if (!res.Succeeded)
             {
                 if (res.IsLockedOut)
@@ -115,8 +116,8 @@ namespace EduHome.App.Controllers
                     ModelState.AddModelError("", "Your Account was blocked for 1 minutes");
                     return View();
                 }
-
-                if (res.IsNotAllowed)
+      
+                if (res.IsNotAllowed )
                 {
                     ModelState.AddModelError("", "Verify your email");
                     return View();
@@ -195,8 +196,86 @@ namespace EduHome.App.Controllers
                 }
             }
             await _signInManager.SignInAsync(appUser, true);
-            return RedirectToAction(nameof(Update));
+            return RedirectToAction("Index","Home");
         }
+
+
+
+
+        public async Task<IActionResult> ForgetPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(string email)
+        {
+            AppUser appUser = await _userManager.FindByEmailAsync(email);
+
+
+            if (appUser == null)
+            {
+                ModelState.AddModelError("", "please add valid email");
+                return View();
+            }
+
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(appUser);
+            var url = $"{Request.Scheme}://{Request.Host}{Url.Action("ResetPassword", "Identity", new { email = appUser.Email, token = token })}";
+
+            string path = Path.Combine(_webHostEnvironment.WebRootPath, "Templates", "Verify.html");
+
+            string body = string.Empty;
+
+            body = System.IO.File.ReadAllText(path);
+
+            body = body.Replace("{{url}}", url);
+
+
+            await _emailService.SendEmail(appUser.Email, "Reset Passsword", body);
+            TempData["resetPassword"] = "reset";
+            return RedirectToAction("index", "home");
+        }
+
+
+        public async Task<IActionResult> ResetPassword(string email, string token)
+        {
+            AppUser appUser = await _userManager.FindByEmailAsync(email);
+
+            if (appUser == null)
+            {
+                return NotFound();
+            }
+            return View(new ResetPasswordDto { Email = email, Token = token });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordDto dto)
+        {
+            AppUser appUser = await _userManager.FindByEmailAsync(dto.Email);
+
+            if (appUser == null)
+            {
+                return NotFound();
+            }
+
+            var res = await _userManager.ResetPasswordAsync(appUser, dto.Token, dto.Password);
+
+            if (!res.Succeeded)
+            {
+                foreach (var item in res.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
+                }
+                return View(dto);
+            }
+            return RedirectToAction("index", "home");
+        }
+
+
+
+
+
+
 
         //public async Task<IActionResult> Index()
         //{

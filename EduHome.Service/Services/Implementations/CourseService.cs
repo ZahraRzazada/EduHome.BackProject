@@ -35,7 +35,8 @@ namespace EduHome.Service.Services.Implementations
                 Certification=dto.Certification,
                 Apply=dto.Apply,
                 About=dto.About,
-                Features=new List<Feature>(),
+              
+                Features =new List<Feature>(),
                 Description = dto.Description,
                 Title = dto.Title,
                 TagCourses = new List<TagCourse>(),
@@ -99,6 +100,7 @@ namespace EduHome.Service.Services.Implementations
               {
                   Name=x.Name,
                   Title = x.Title,
+                  Features = x.Features,
                   Id = x.Id,
                   About=x.About,
                   Apply=x.Apply,
@@ -124,22 +126,26 @@ namespace EduHome.Service.Services.Implementations
 
             CourseGetDto courseGetDto = new CourseGetDto
             {
-                Name=course.Name,
+                Name = course.Name,
                 Id = course.Id,
                 Date = course.CreatedAt,
                 Description = course.Description,
-                About=course.About,
-                Apply=course.Apply,
-                Certification=course.Certification,
+                About = course.About,
+                Apply = course.Apply,
+                Certification = course.Certification,
                 Image = course.Image,
                 tags = course.TagCourses.Select(x => new TagGetDto { Name = x.Tag.Name, Id = x.Tag.Id }),
                 Title = course.Title,
+                Features=course.Features,
                 CategoryGetDto = new CategoryGetDto
                 {
                     Name = course.Category.Name,
                     Id = course.Category.Id,
                 },
-                Features=course.Features
+                FeatureKeys = course.Features.Select(x => x.Key).ToList(),
+                FeatureValues = course.Features.Select(x => x.Value).ToList(),
+
+
 
             };
             return courseGetDto;
@@ -147,7 +153,7 @@ namespace EduHome.Service.Services.Implementations
 
         public async Task RemoveAsync(int id)
         {
-            Course? course = await _courseRepository.GetAsync(x => !x.IsDeleted && x.Id == id, "TagBlogs.Tag");
+            Course? course = await _courseRepository.GetAsync(x => !x.IsDeleted && x.Id == id, "TagCourses.Tag");
 
             if (course == null)
             {

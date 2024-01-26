@@ -29,14 +29,16 @@ namespace EduHome.Data.ServiceRegisterations
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
-
+            services.AddScoped<INoticeRepository, NoticeRepository>();
             services.AddIdentity<AppUser, IdentityRole>(
                 opt =>
                 {
                     opt.User.RequireUniqueEmail = true;
                     opt.Lockout.MaxFailedAccessAttempts = 3;
                     opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
-                    opt.SignIn.RequireConfirmedEmail = true;
+                   
+                    opt.SignIn.RequireConfirmedEmail = false;
+                    
                 })
                 .AddEntityFrameworkStores<EduDbContext>().AddDefaultTokenProviders();
            
