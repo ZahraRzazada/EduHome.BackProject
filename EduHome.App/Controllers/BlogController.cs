@@ -25,7 +25,7 @@ namespace EduHome.App.Controllers
             _blogService = blogService;
 
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchText)
         {
             IEnumerable<BlogGetDto> Blogs = await _blogService.GetAllAsync();
             ViewBag.Tags = _context.Tags.Where(x => !x.IsDeleted)
@@ -36,7 +36,9 @@ namespace EduHome.App.Controllers
                 .Include(m=>m.Blogs)
                .Select(cate => new { Name= cate.Name,Count=cate.Blogs.Where(m=>!m.IsDeleted).Count()}).AsNoTrackingWithIdentityResolution();
 
-            return View(Blogs);
+
+            return View(await _blogService.GetBlogsBySearchTextAsync(searchText));
+     
         }
         public async Task<IActionResult> Detail(int id)
         {
@@ -52,6 +54,7 @@ namespace EduHome.App.Controllers
 
             return View(blogGetDto);
         }
+        
     }
 }
 

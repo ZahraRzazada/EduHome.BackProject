@@ -1,4 +1,6 @@
-﻿using EduHome.Service.Services.Implementations;
+﻿using EduHome.Service.ExternalServices.Implementations;
+using EduHome.Service.ExternalServices.Interfaces;
+using EduHome.Service.Services.Implementations;
 using EduHome.Service.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,7 +22,9 @@ namespace EduHome.Service.ServiceRegistrations
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<ITagService, TagService>();
             services.AddScoped<ICourseService, CourseService>();
-      
+            services.AddHttpContextAccessor();
+            services.AddScoped<IEmailService, EmailService>();
+
         }
 	}
 }

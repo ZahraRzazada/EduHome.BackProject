@@ -2,6 +2,7 @@
 using EduHome.App.ViewModels;
 using EduHome.Core.DTOS;
 using EduHome.Data.Contexts;
+using EduHome.Service.ExternalServices.Interfaces;
 using EduHome.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,13 +17,15 @@ public class HomeController : Controller
     readonly ITestimonialService _testimonialService;
     readonly ICourseService _courseService;
     readonly IBlogService _blogService;
+    readonly IEmailService _emailService;
 
-    public HomeController(ISliderService sliderService, ITestimonialService testimonialService, ICourseService courseService, IBlogService blogService)
+    public HomeController(ISliderService sliderService, ITestimonialService testimonialService, ICourseService courseService, IBlogService blogService, IEmailService emailService)
     {
         _sliderService = sliderService;
         _testimonialService = testimonialService;
         _courseService = courseService;
         _blogService = blogService;
+        _emailService = emailService;
     }
 
     public async Task<IActionResult> Index()
@@ -33,5 +36,11 @@ public class HomeController : Controller
         homeViewModel.Courses = await _courseService.GetAllAsync();
         homeViewModel.Blogs = await _blogService.GetAllAsync();
         return View(homeViewModel);
+    }
+
+    public async Task<IActionResult> SendEmail()
+    {
+        await _emailService.SendEmail("rzazadazz@gmail.com", "Test", "<h1>ELnur will go to east</h1>");
+        return Json("ok");
     }
 }

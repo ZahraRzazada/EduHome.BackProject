@@ -18,6 +18,9 @@
     <None Remove="Services\" />
     <None Remove="Services\Implementations\" />
     <None Remove="Services\Interfaces\" />
+    <None Remove="ExternalServices\" />
+    <None Remove="ExternalServices\Implementations\" />
+    <None Remove="ExternalServices\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomMiddlewares\" />
@@ -28,5 +31,8 @@
     <Folder Include="Services\" />
     <Folder Include="Services\Implementations\" />
     <Folder Include="Services\Interfaces\" />
+    <Folder Include="ExternalServices\" />
+    <Folder Include="ExternalServices\Implementations\" />
+    <Folder Include="ExternalServices\Interfaces\" />
   </ItemGroup>
 </Project>

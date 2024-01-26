@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "L2KaTWcwF+jHMjX3Okq+l/ZrRUDvsIOJvQmn8y9COp0xQ+OLh5YUQlpYbVV1PTHYkvY4k7el7MD1VWX3oP/Nag==",
+  "dgSpecHash": "Xs25opRozf6mkxGjxlvo6v9Qpk964XNXrgnTnjQ6LWPufgHXhdKGnqfi2TamnhBJIJI4TtbVatlLLLW+erhguw==",
   "success": true,
   "projectFilePath": "/Users/zahrarzazada/Projects/EduHome/EduHome.Data/EduHome.Data.csproj",
   "expectedPackageFiles": [
+    "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.25/microsoft.aspnetcore.cryptography.internal.6.0.25.nupkg.sha512",
+    "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.25/microsoft.aspnetcore.cryptography.keyderivation.6.0.25.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.http.features/5.0.17/microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/6.0.25/microsoft.aspnetcore.identity.entityframeworkcore.6.0.25.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.jsonpatch/6.0.25/microsoft.aspnetcore.jsonpatch.6.0.25.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/6.0.25/microsoft.aspnetcore.mvc.newtonsoftjson.6.0.25.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
@@ -20,6 +23,8 @@
     "/Users/zahrarzazada/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.1/microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/zahrarzazada/.nuget/packages/microsoft.extensions.identity.core/6.0.25/microsoft.extensions.identity.core.6.0.25.nupkg.sha512",
+    "/Users/zahrarzazada/.nuget/packages/microsoft.extensions.identity.stores/6.0.25/microsoft.extensions.identity.stores.6.0.25.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "/Users/zahrarzazada/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",

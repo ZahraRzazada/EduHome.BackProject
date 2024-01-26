@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class TagController : Controller
     {
         readonly ITagService _tagService;

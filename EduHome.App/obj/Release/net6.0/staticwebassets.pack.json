@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/.DS_Store"
     },
     {
+      "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/Templates/Verify.html",
+      "PackagePath": "staticwebassets/Templates/Verify.html"
+    },
+    {
       "Id": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/admin/assets/css/maps/vertical-layout-light/style.css.map",
       "PackagePath": "staticwebassets/admin/assets/css/maps/vertical-layout-light/style.css.map"
     },

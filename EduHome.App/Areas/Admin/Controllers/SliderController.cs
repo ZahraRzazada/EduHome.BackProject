@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using EduHome.Core.DTOS;
 using EduHome.Service.Services.Implementations;
 using EduHome.Service.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SliderController : Controller
     {
         readonly ISliderService _sliderService;

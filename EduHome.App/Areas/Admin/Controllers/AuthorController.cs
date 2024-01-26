@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin,SuperAdmin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class AuthorController : Controller
     {
         readonly IAuthorService _authorService;

@@ -28,6 +28,8 @@
     <None Remove="Areas\Admin\Views\Slider\" />
     <None Remove="Areas\Admin\Views\Testimonial\" />
     <None Remove="Areas\Admin\Views\Course\" />
+    <None Remove="Areas\Admin\Views\Identity\" />
+    <None Remove="Views\Identity\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -54,10 +56,14 @@
     <Folder Include="Areas\Admin\Views\Slider\" />
     <Folder Include="Areas\Admin\Views\Testimonial\" />
     <Folder Include="Areas\Admin\Views\Course\" />
+    <Folder Include="Areas\Admin\Views\Identity\" />
+    <Folder Include="Views\Identity\" />
+    <Folder Include="wwwroot\Templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
     <Content Remove="wwwroot\admin\" />
+    <Content Remove="wwwroot\Templates\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EduHome.Service\EduHome.Service.csproj">

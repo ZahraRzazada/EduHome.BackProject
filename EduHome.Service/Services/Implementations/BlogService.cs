@@ -191,7 +191,40 @@ namespace EduHome.Service.Services.Implementations
             await _blogRepository.SaveChangesAsync();
             return commonResponse;
         }
+        public async Task<List<BlogGetDto>> GetBlogsBySearchTextAsync(string searchText)
+        {
+            if (string.IsNullOrEmpty(searchText))
+            {
+                List<BlogGetDto> blogGetDtos = await _blogRepository.GetQuery(x => !x.IsDeleted)
+                   .AsNoTrackingWithIdentityResolution().Include(x => x.Author)
+                   .Select(x => new BlogGetDto
+                   {
+                       Id = x.Id,
+                       Title = x.Title,
+                       Description = x.Description,
+                       Image = x.Image,
+                       AuthorGetDto = new AuthorGetDto { FullName = x.Author.FullName},
+                       Date = x.CreatedAt,
+                       //CommentCount = x.Comments.Where(x => !x.IsDeleted).Count()
+                   }).ToListAsync();
 
+                return blogGetDtos;
+            }
+
+            return await _blogRepository.GetQuery(x => !x.IsDeleted).AsNoTrackingWithIdentityResolution()
+                .Include(x => x.Author)
+                 .Select(x => new BlogGetDto
+                 {
+                     Id = x.Id,
+                     Title = x.Title,
+                     Description = x.Description,
+                     Image = x.Image,
+                     AuthorGetDto = new AuthorGetDto { FullName = x.Author.FullName},
+                     Date = x.CreatedAt,
+                     //CommentCount = x.Comments.Where(x => !x.IsDeleted).Count()
+
+                 }).Where(m => m.Title.ToLower().Contains(searchText.ToLower())).ToListAsync();
+        }
     }
-}
 
+}

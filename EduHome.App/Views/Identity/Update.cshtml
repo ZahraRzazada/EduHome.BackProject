@@ -1,0 +1,64 @@
+﻿@model UpdateDto
+<div class="banner-area-wrapper">
+    <div class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <h2>Update</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Login start -->
+<div class="login-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="login">
+                    <div class="login-form-container">
+                        <div class="login-text">
+                            <h2>Update</h2>
+                            <span>Please login using account detail bellow.</span>
+                        </div>
+                        <div class="login-form">
+                            <form class="row login_form" method="post">
+                                <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+                                <div class="col-md-12 form-group">
+                                    <input asp-for="FullName" class="form-control" placeholder="FullName" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FullName'">
+                                    <span class="alert alert-text" asp-validation-for="FullName"></span>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <input asp-for="UserName" class="form-control" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+                                    <span class="alert alert-text" asp-validation-for="UserName"></span>
+                                </div>
+                              
+                                <div class="col-md-12 form-group">
+                                    <input asp-for="OldPassword" class="form-control" placeholder="OldPasword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                                    <span class="alert alert-text" asp-validation-for="OldPassword"></span>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <input asp-for="NewPassword" class="form-control" placeholder="NewPasword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ConfirmPassword'">
+                                    <span class="alert alert-text" asp-validation-for="NewPassword"></span>
+                                </div>
+                        
+                                <div class="col-md-12 form-group">
+                                    <button type="submit" value="submit" class="primary-btn">Update</button>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

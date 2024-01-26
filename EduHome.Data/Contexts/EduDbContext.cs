@@ -1,10 +1,11 @@
 ﻿using System;
 using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduHome.Data.Contexts
 {
-    public class EduDbContext : DbContext
+    public class EduDbContext : IdentityDbContext<AppUser>
     {
         public EduDbContext(DbContextOptions<EduDbContext> options) : base(options)
         {
@@ -28,6 +29,9 @@ namespace EduHome.Data.Contexts
         public DbSet<Course> Courses { get; set; }
         public DbSet<TagCourse> TagCourses { get; set; }
         public DbSet<TagBlog> TagBlogs { get; set; }
+
+
+
    
     }
 

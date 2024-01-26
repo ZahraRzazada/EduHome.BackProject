@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class HobbyController : Controller
     {
         public readonly IHobbyService _hobbyService;

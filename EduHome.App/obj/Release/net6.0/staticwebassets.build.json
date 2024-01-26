@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5qqfkOq6T4WPRMI1d3pjnTADYJ7+5wTqVdBRZh3SOw0=",
+  "Hash": "FPprJHWKSiEFrWOIulu64mYMO0J6QpSGD1qaYcUX3no=",
   "Source": "EduHome.App",
   "BasePath": "_content/EduHome.App",
   "Mode": "Default",
@@ -29714,6 +29714,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/js/vendor/modernizr-2.8.3.min.js"
+    },
+    {
+      "Identity": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/Templates/Verify.html",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/zahrarzazada/Projects/EduHome/EduHome.App/wwwroot/",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "Templates/Verify.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Templates/Verify.html"
     }
   ]
 }

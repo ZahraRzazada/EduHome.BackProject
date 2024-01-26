@@ -24,6 +24,7 @@
     <None Remove="DTOS\Tag\" />
     <None Remove="DTOS\Course\" />
     <None Remove="DTOS\About\" />
+    <None Remove="DTOS\Identity\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -43,6 +44,7 @@
     <Folder Include="DTOS\Tag\" />
     <Folder Include="DTOS\Course\" />
     <Folder Include="DTOS\About\" />
+    <Folder Include="DTOS\Identity\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">
@@ -50,5 +52,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.25" />
   </ItemGroup>
 </Project>

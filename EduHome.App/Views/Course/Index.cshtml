@@ -50,7 +50,7 @@
                         <div class="course-content">
                             <h3><a href="course-details.html">@item.Name</a></h3>
                             <p>@item.Title</p>
-                            <a class="default-btn" href="course-details.html">read more</a>
+                            <a class="default-btn" asp-controller="course" asp-action="detail" asp-route-id="@item.Id">read more</a>
                         </div>
                     </div>
                 </div>

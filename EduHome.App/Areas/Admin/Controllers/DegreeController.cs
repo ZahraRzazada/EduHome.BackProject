@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class DegreeController : Controller
     {
         readonly IDegreeService _degreeService;

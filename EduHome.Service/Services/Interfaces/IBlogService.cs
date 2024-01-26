@@ -15,6 +15,7 @@ namespace EduHome.Service.Services.Interfaces
 
         public Task<CommonResponse> UpdateAsync(int id, BlogPostDto dto);
         public Task<BlogGetDto> GetAsync(int id);
+        public Task<List<BlogGetDto>> GetBlogsBySearchTextAsync(string searchText);
     }
 }
 

@@ -1,0 +1,58 @@
+﻿@model LoginDto
+<div class="banner-area-wrapper">
+    <div class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <h2>Login</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Login start -->
+<div class="login-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="login">
+                    <div class="login-form-container">
+                        <div class="login-text">
+                            <h2>login</h2>
+                            <span>Please login using account detail bellow.</span>
+                        </div>
+                        <div class="login-form">
+                            <form class="row login_form" method="post" id="contactForm">
+                                <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+                                <div class="col-md-12 form-group">
+                                    <input asp-for="UserNameOrEmail" class="form-control" placeholder="UsernameOrEmail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'UsernameOrEmail'">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <input asp-for="Password" class="form-control" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <div class="creat_account">
+                                        <input asp-for="RememberMe">
+                                        <label for="f-option2">Keep me logged in</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <button type="submit" value="submit" class="primary-btn">Log In</button>
+                                    <a asp-controller="identity" asp-action="ForgetPassword">Forgot Password?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

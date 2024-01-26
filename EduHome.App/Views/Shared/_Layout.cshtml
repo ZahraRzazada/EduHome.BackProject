@@ -40,14 +40,11 @@
                             <p>HAVE ANY QUESTION ?  +880 5698  598  6587</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="header-top-right text-right">
-                            <ul>
-                                <li><a href="login.html">login</a></li>
-                                <li><a href="signup.html">signup</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
+
+               
+                  
+
                 </div>
             </div>
         </div>
@@ -71,26 +68,48 @@
                                             <a class="nav-link" asp-controller="course" asp-action="index">Course</a>
                                             <ul>
                                                 <li class="nav-item " controller="course"><a class="nav-link" asp-controller="course" asp-action="index">Course</a></li>
-                                                <li class="nav-item " controller="course"><a class="nav-link" asp-controller="course" asp-action="detail" >Course Detail</a></li>
+
                                             </ul>
                                         </li>
-                                       
+
                                         <li>
                                             <a class="nav-link" asp-controller="teacher" asp-action="index">Teacher</a>
                                             <ul>
                                                 <li class="nav-item " controller="teacher"><a class="nav-link" asp-controller="teacher" asp-action="index">Teacher</a></li>
-                                                <li class="nav-item " controller="teacher"><a class="nav-link" asp-controller="teacher" asp-action="detail">Teacher Detail</a></li>
+
                                             </ul>
                                         </li>
                                         <li>
                                             <a class="nav-link" asp-controller="blog" asp-action="index">Blog</a>
                                             <ul>
                                                 <li class="nav-item " controller="blog"><a class="nav-link" asp-controller="blog" asp-action="index">Blog</a></li>
-                                                <li class="nav-item " controller="blog"><a class="nav-link" asp-controller="blog" asp-action="detail">Blog Detail</a></li>
+
                                             </ul>
                                         </li>
                                         <li class="nav-item " controller="contact"><a class="nav-link" asp-controller="contact" asp-action="index">Contact</a></li>
-                                    
+
+                                        @if (User.Identity.IsAuthenticated && User.IsInRole("User"))
+                                        {
+                                            <li class="nav-item submenu dropdown">
+                                                <a asp-controller="identity" asp-action="update" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                   aria-expanded="false">@User.Identity.Name</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a class="nav-link" asp-controller="identity" asp-action="Logout">Logout</a></li>
+                                                    <li class="nav-item"><a class="nav-link" asp-controller="identity" asp-action="update">Update</a></li>
+                                                </ul>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="nav-item submenu dropdown">
+                                                <a href="~/#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                   aria-expanded="false">Login/Register</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a class="nav-link" asp-controller="identity" asp-action="login">Login</a></li>
+                                                    <li class="nav-item"><a class="nav-link" asp-controller="identity" asp-action="register">Register</a></li>
+                                                </ul>
+                                            </li>
+                                        }
                                     </ul>
                                 </nav>
                             </div>

@@ -1,6 +1,8 @@
-﻿using EduHome.Core.Repositories;
+﻿using EduHome.Core.Entities;
+using EduHome.Core.Repositories;
 using EduHome.Data.Contexts;
 using EduHome.Data.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +29,16 @@ namespace EduHome.Data.ServiceRegisterations
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
+
+            services.AddIdentity<AppUser, IdentityRole>(
+                opt =>
+                {
+                    opt.User.RequireUniqueEmail = true;
+                    opt.Lockout.MaxFailedAccessAttempts = 3;
+                    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
+                    opt.SignIn.RequireConfirmedEmail = true;
+                })
+                .AddEntityFrameworkStores<EduDbContext>().AddDefaultTokenProviders();
            
         }
     }
